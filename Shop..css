@@ -1,0 +1,463 @@
+/*================= SECTION 1 ================*/
+/* ================= SHOP PAGE ================= */
+.shop-page {
+  padding: 60px 90px;
+  font-family: sans-serif;
+  margin-top: -25px;
+}
+
+.shop-title {
+  text-align: center;
+  color: var(--blue);
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: "Outfit-Bold";
+}
+@font-face {
+  font-family: "Outfit-Bold";
+  src: url(./fonts/Outfit-Bold.ttf);
+}
+
+.shop-subtitle {
+  text-align: center;
+  font-size: 9px;
+  margin-top: 6px;
+  color: #C0C2CE;
+}
+
+.shop-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* FILTER */
+.shop-filter {
+  position: relative;
+  right: 50px;
+  font-size: 9px;
+  font-family: "Outfit-Regular";
+  top: -29px;
+}
+.buscar{
+  border-bottom: 1px solid #C0C2CE;
+  width: 43%;
+}
+
+.shop-filter h4 {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.filter-group{
+  margin-top: 10px;
+  border-bottom: 1px solid #C0C2CE;
+  width: 43%;
+}
+.filter-group:hover{
+  cursor: pointer;
+}
+.filter-group .c-{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: #9C9FA4;
+}
+.c- .c-1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  color: #C0C2CE;
+}
+.c--{
+  display: flex;
+  flex-direction: column;
+  color: #9C9FA4;
+}
+.wo{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px; 
+  color: #C0C2CE;
+}
+.filter-group span{
+  font-size: 12px;
+  color: #9C9FA4;
+}
+.filter-group ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+  line-height: 1;
+
+}
+
+.filter-group li {
+  font-size: 8px;
+  margin-bottom: 6px;
+  color: #9C9FA4;
+  cursor: pointer;
+}
+.filter-group li:hover {
+  color: #C0C2CE;
+}
+
+/* GRID */
+.shop-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  right: 195px;
+  top: -35px;
+}
+
+/* CARD */
+.product-card {
+  background: #f1f1f1;
+  text-align: center;
+  width: 380px;
+  height: 400px;
+}
+.shop-grid .product-card:nth-child(n + 4) {
+  margin-top: 50px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 400px;
+}
+/* product blue span */
+.product-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: var(--blue);
+  color: white;
+
+  font-size: 8px;
+  font-family: "Outfit-Regular";
+  font-weight: 600;
+  letter-spacing: 0.8px;
+
+  padding: 1px 6px;
+
+  z-index: 5;
+  pointer-events: none; /* hover'ı bozmasın */
+}
+
+.product-about{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  font-family: "Outfit-Regular";
+}
+.product-name {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 10px;
+  color: var(--blue);
+  margin-top: 10px;
+}
+
+.product-price {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 7px;
+  bottom: 14px;
+}
+
+.product-status {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  bottom: 14px;
+  font-size: 10px;
+  color: var(--blue);
+}
+
+@media (max-width: 1024px) {
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*((((((((((((((((((((((((((((((((((((((((((((((*/
+.ver{
+  border: 1px solid var(--blue);
+  width: 25%;
+  text-align: center;
+  align-items: center;
+  font-size: 10px;
+  font-family: "Outfit-Regular";
+  padding: 3px 0 3px 0;
+  color: var(--blue);
+}
+.ver a{
+  text-decoration: none;
+}
+.ver a:hover{
+  text-decoration: underline;
+}
+.versec{
+  display: flex;
+  justify-content: center;
+  margin-top: -33px;
+}
+
+.footer-section2{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+  background: white;
+  color: #0015FF;
+  padding: 0 320px;
+
+  
+  margin-bottom: 0;
+  top: 50px;
+  padding-bottom: 0;
+}
+.fot2 input[type="checkbox"]{
+  position: relative;
+  display: flex;
+  align-items: center;
+  bottom: 7px; 
+}
+.btn2{
+  margin-bottom: 17px;
+}
+.endendd{
+  position: relative;
+  display: flex;
+  margin-top: 4px;
+  right: -3px;
+  top: 40px;
+  align-items: center;
+}
+.endendd span{
+  font-family: "Outfit-Regular";
+  font-weight: bold;
+  font-size: 9px;
+}
+
+/* image wrapper */
+.product-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* quick view bar */
+.quick-view {
+  position: absolute;
+  left: 0;
+  bottom: -40px;              /* başlangıçta gizli */
+  width: 100%;
+  height: 28px;               /* ~10px hissi ama okunabilir */
+  
+  background: #F4F4F4;
+  color: var(--blue);
+  font-size: 9px;
+  letter-spacing: 1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: bottom 0.25s ease;
+}
+.img-front{
+  position: absolute;
+  left: 0;
+        
+  width: 100%;
+  height: 36px;               /* ~10px hissi ama okunabilir */
+  
+  background: white;
+  color: var(--blue);
+  font-size: 9px;
+  letter-spacing: 1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.25s ease;
+}
+
+/* hover olunca çıksın */
+.product-card:hover .quick-view {
+  opacity: 0.8;
+  bottom: 0;
+}
+.img-front {
+  opacity: 1;
+  z-index: 1;
+}
+/* ikinci resim gizli */
+.img-back {
+  opacity: 0;
+  z-index: 2;
+}
+
+/* hover olunca değiş */
+.product-card:hover .img-front {
+  opacity: 0;
+}
+.product-card:hover .img-back {
+  opacity: 1;
+}
+
+/* ================= PAGE TRANSITION ================= */
+
+.page-transition {
+  opacity: 0;
+  animation: pageFadeIn 0.4s ease forwards;
+}
+
+@keyframes pageFadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ================= SHOP PAGE RESPONSIVE ================= */
+
+/* ---------- TABLET (≤1024px) ---------- */
+@media (max-width: 1024px) {
+
+  .shop-page {
+    padding: 50px 40px;
+  }
+
+  /* layout alt alta */
+  .shop-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* filter üstte */
+  .shop-filter {
+    position: static;
+    width: 100%;
+    right: 0;
+    top: 0;
+  }
+
+  .buscar,
+  .filter-group {
+    width: 100%;
+  }
+
+  /* grid 2 kolon */
+  .shop-grid {
+    right: 0;
+    top: 0;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .product-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-card img {
+    height: auto;
+  }
+}
+
+/* ---------- MOBILE (≤768px) ---------- */
+@media (max-width: 768px) {
+
+  .shop-title {
+    font-size: 18px;
+  }
+
+  .shop-subtitle {
+    font-size: 8px;
+  }
+
+  /* ürünler TEK KOLON */
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+
+  /* quick-view hover mobilde sorun çıkarmasın */
+  .quick-view {
+    bottom: 0;
+    opacity: 1;
+  }
+
+  .product-card:hover .img-front {
+    opacity: 1;
+  }
+
+  .product-card:hover .img-back {
+    opacity: 0;
+  }
+}
+
+/* ---------- SMALL MOBILE (≤480px) ---------- */
+@media (max-width: 480px) {
+
+  .shop-page {
+    padding: 40px 20px;
+  }
+
+  .shop-title {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .shop-subtitle {
+    font-size: 7px;
+  }
+
+  .product-name {
+    font-size: 9px;
+  }
+
+  .product-price {
+    font-size: 7px;
+  }
+
+  .ver {
+    width: 60%;
+  }
+
+  .footer-section2 {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+}
+
