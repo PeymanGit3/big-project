@@ -459,32 +459,42 @@ document.addEventListener("DOMContentLoaded", () => {
 <!--========================= reveal-section ============================-->
 <script>
 window.addEventListener("load", () => {
-  const scroller = null;
-  const windowBox = document.querySelector(".reveal-window");
-  const img = windowBox.querySelector("img");
 
-  if (!scroller || !windowBox || !img) {
-    console.log("Eleman bulunamad:", { scroller, windowBox, img });
+  const scroller = window;
+  const windowBox = document.querySelector(".reveal-window");
+  const img = windowBox?.querySelector("img");
+
+  if (!windowBox || !img) {
+    console.log("Eleman bulunamad");
     return;
   }
 
-  scroller.addEventListener("scroll", () => {
+  function onScroll() {
     const box = windowBox.getBoundingClientRect();
-    const wrap = scroller.getBoundingClientRect();
 
-    // windowBox, scroller içine ne kadar girdi? (0..1 arası)
-    const progress = Math.min(1, Math.max(0, (wrap.bottom - box.top) / wrap.height));
+    const viewportHeight = window.innerHeight;
 
-    // hareket miktarı (px)
-    const move = progress *(-207 + 420); // 120'yi artırırsan daha çok kayar
+    // reveal-window viewport içine ne kadar girdi? (0..1)
+    const progress = Math.min(
+      1,
+      Math.max(
+        0,
+        (viewportHeight - box.top) / (viewportHeight + box.height)
+      )
+    );
+
+    const move = progress * (420 - 207);
 
     img.style.transform = `translateY(${move}px)`;
-  });
+  }
 
-  // sayfa ilk açılınca da bir kez hesaplasın
-  scroller.dispatchEvent(new Event("scroll"));
+  scroller.addEventListener("scroll", onScroll);
+
+  // sayfa ilk açıldığında da çalışsın
+  onScroll();
 });
 </script>
+
 
 <!--========================= FORM ============================-->
 <script>
