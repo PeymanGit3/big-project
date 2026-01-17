@@ -664,7 +664,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: 999;
 
   opacity: 0;
   pointer-events: none;
@@ -694,17 +694,17 @@
 }
 
 
-/* MODAL (200x200) */
 .chat-modal{
   width: 320px;
   height: auto;
   max-height: 90vh;
   background: var(--blue);
-  border-radius: 6px;
+  border-radius: 10px;
   position: relative;
   box-shadow: 0 10px 30px rgba(0,0,0,.2);
   padding: 22px 20px;
   overflow: auto;
+  font-family: "Outfit-Regular";
 }
 
 
@@ -767,8 +767,41 @@
   margin: 8px 0 10px;
 }
 .chat-check input{
-  margin-top: 2px;
+  margin-top: -3px;
 }
+
+.chat-check input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 15px;
+  height: 15px;
+
+  border: 1.5px solid #0015FF;
+  background: white;
+
+  position: relative;
+  cursor: pointer;
+}
+.chat-check input[type="checkbox"]:checked {
+  background: white;   /* 🔥 önemli */
+}
+.chat-check input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+
+  left: 4px;
+  top: 2px;
+  
+  width: 5px;
+  height: 7px;
+
+  border: solid #0015FF; 
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
 .chat-check label{
   font-size: 7px;
   line-height: 1.2;
@@ -788,6 +821,7 @@
   font-size: 11px;
   letter-spacing: 1px;
   cursor: pointer;
+  margin-left: 115px;
 }
 /*================= FORM BUTTON ================*/
 

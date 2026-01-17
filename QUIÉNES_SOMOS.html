@@ -403,6 +403,57 @@
     </div>
   </form>
   <!--================= FORM ================-->
+
+    <!--================= FORM BUTTON ================-->
+  <!-- CHAT MODAL OVERLAY -->
+<div class="chat-overlay" id="chatOverlay">
+  <div class="chat-modal" role="dialog" aria-modal="true" aria-label="Contact form">
+    <button class="chat-close" id="chatClose" type="button">&times;</button>
+
+    <h4 class="chat-title">Contáctanos</h4>
+    <p class="chat-sub">
+      También puedes enviarnos un email a info@festelastore.com o rellenar nuestro formulario:
+    </p>
+
+    <form class="chat-form">
+      <div class="chat-row">
+        <label class="chat-label">NOMBRE*</label>
+        <input class="chat-input" type="text" placeholder="" required>
+      </div>
+
+      <div class="chat-row">
+        <label class="chat-label">E-MAIL*</label>
+        <input class="chat-input" type="email" placeholder="" required>
+      </div>
+
+      <div class="chat-row">
+        <label class="chat-label">ASUNTO</label>
+        <input class="chat-input" type="text" placeholder="">
+      </div>
+
+      <div class="chat-row">
+        <label class="chat-label">MENSAJE*</label>
+        <textarea class="chat-textarea" rows="3" required></textarea>
+      </div>
+
+      <div class="chat-check">
+        <input id="chatAgree" type="checkbox" required>
+        <label for="chatAgree">
+          He leído y acepto el aviso legal y la política de privacidad.
+          <a href="#">Ver política de privacidad</a>
+        </label>
+      </div>
+
+      <button class="chat-send" type="submit">ENVIAR</button>
+    </form>
+  </div>
+</div>
+
+<button class="chat-btn" aria-label="Open chat">
+  <i class="fa-solid fa-comment-dots"></i>
+</button>
+  <!--================= FORM BUTTON ================-->
+
   <div class="footer-col3 links3">
     <h4>Aviso Legal</h4>
     <ul>
@@ -761,28 +812,47 @@ mobileNav.querySelectorAll("a").forEach(link => {
 <!--================================================ FORM BUTTON ==================================================-->
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const chatBtn = document.querySelector(".chat-btn"); // <-- bunu kendi butonuna göre değiştir
-  const overlay = document.getElementById("chatOverlay");
-  const closeBtn = document.getElementById("chatClose");
+(function () {
 
-  if (!overlay || !closeBtn) return;
+  // Açma – KAPAMA tamamen event delegation
+  document.addEventListener("click", function (e) {
 
-  if (chatBtn) {
-    chatBtn.addEventListener("click", () => overlay.classList.add("active"));
-  }
+    // CHAT AÇ
+    const openBtn = e.target.closest(".chat-btn");
+    if (openBtn) {
+      const overlay = document.getElementById("chatOverlay");
+      if (overlay) overlay.classList.add("active");
+      return;
+    }
 
-  closeBtn.addEventListener("click", () => overlay.classList.remove("active"));
+    // CHAT KAPAT (X)
+    const closeBtn = e.target.closest("#chatClose");
+    if (closeBtn) {
+      const overlay = document.getElementById("chatOverlay");
+      if (overlay) overlay.classList.remove("active");
+      return;
+    }
 
-  overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) overlay.classList.remove("active");
+    // OVERLAY TIK
+    if (e.target.classList.contains("chat-overlay")) {
+      e.target.classList.remove("active");
+    }
   });
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") overlay.classList.remove("active");
+  // ESC ile kapat
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      const overlay = document.getElementById("chatOverlay");
+      if (overlay) overlay.classList.remove("active");
+    }
   });
-});
+
+})();
 </script>
+
+
+
+
 
 </body>
 </html>
