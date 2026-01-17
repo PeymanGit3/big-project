@@ -797,5 +797,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </script>
 
+
+<!--================================================ FORM BUTTON ==================================================-->
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const chatBtn = document.querySelector(".chat-btn"); // <-- bunu kendi butonuna göre değiştir
+  const overlay = document.getElementById("chatOverlay");
+  const closeBtn = document.getElementById("chatClose");
+
+  if (!overlay || !closeBtn) return;
+
+  if (chatBtn) {
+    chatBtn.addEventListener("click", () => overlay.classList.add("active"));
+  }
+
+  closeBtn.addEventListener("click", () => overlay.classList.remove("active"));
+
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) overlay.classList.remove("active");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") overlay.classList.remove("active");
+  });
+});
+</script>
+
 </body>
 </html>
