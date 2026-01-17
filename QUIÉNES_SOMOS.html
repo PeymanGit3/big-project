@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./bigproj..css">
-    <link rel="stylesheet" href="./Shop..css">
     <link rel="stylesheet" href="./QUIÉNES SOMOS.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +16,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=sticky_note_2" />  
 
 </head>
-<body class="page-transition">
+<body class="page-transition page-transition page-about">
 
-<div class="imp-wrapper">
-  <section class="imp">
-    <div class="headerr">
+    <div class="headerr header3">
       <div class="namebox">
         <div class="brandname"><a href="./index.html">FESTELA</a></div>
          <div class="brandname2">handmadecollection</div>
@@ -90,7 +87,7 @@
   <div class="values-grid">
 
     <!-- CARD 1 -->
-    <div class="value-card">
+    <div class="value-card card1">
       <div class="value-img">
         <img src="./3th.imgs/qu1.1.png" class="imgf" alt="">
         <img src="./3th.imgs/qu1.png"  class="imgb" alt="">
@@ -420,10 +417,6 @@
 </section>
 
 
-</section>
-</div>
-
-
 <section class="template-info">
   <div class="template-left">
     <div class="left-top">
@@ -577,10 +570,10 @@
     </div>
 
     <div class="footer-about">
-      <div class="footer-h3"><h3>WIX</h3></div>
+      <div class="footer-h3"><h3>FESTELA</h3></div>
     <div class="footer-p">
       <p>
-        Wix is a website builder that lets any business or individual build their own professional website. By combining design tools and business solutions in one AI-powered platform, Wix makes it easy for anyone to create without limits and scale confidently online.
+        Festela is a clothing brand that offers stylish and carefully crafted fashion for everyday life. By combining modern design, quality fabrics, and a passion for handmade details, Festela helps individuals express their personal style with confidence. From unique garments to thoughtfully designed collections.
       </p>
     </div>
      <div class="footer-ul">
@@ -607,7 +600,7 @@
   <div class="footer-legal">
       <span class="legal">Terms of Use</span>
       <span class="legal">Privacy Policy</span>
-      <span>© 2006-2025 Wix.com, Inc.</span>
+      <span>© 2006-2025 Festela.com, Inc.</span>
     </div>
   </div>
 </footer> 
@@ -690,31 +683,21 @@ document.addEventListener("DOMContentLoaded", () => {
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* scroll container (sende body değil .imp) */
-  const scroller = document.querySelector(".imp");
-
-  /* animasyonlu tüm sectionlar */
   const sections = document.querySelectorAll(".animate-on-scroll");
-
-  if (!scroller || sections.length === 0) return;
+  if (sections.length === 0) return;
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
-
         if (entry.isIntersecting) {
           entry.target.classList.add("is-active");
-
-          /* sadece o section için observer kapansın */
-          observer.unobserve(entry.target);
+          observer.unobserve(entry.target); // bir kez çalışsın
         }
-
       });
     },
     {
-      root: scroller,          // 🔥 en kritik satır
-      threshold: 0.15,         // %15 görünür olunca
-      rootMargin: "0px 0px -100px 0px"
+      threshold: 0.2,                 // biraz daha geç tetiklensin
+      rootMargin: "0px 0px -90px 0px"
     }
   );
 
@@ -722,6 +705,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+
 
 
 

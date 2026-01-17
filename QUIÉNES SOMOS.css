@@ -1,3 +1,23 @@
+.page-about {
+  overflow-x: hidden;
+}
+
+.header3{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  padding: 9px 60px;
+  border-bottom: 1px solid #ddd;
+  background-color: white;
+
+  outline: 2px solid floralwhite;
+}
+
 .about-hero {
   display: flex;
   min-height: 100vh;
@@ -23,7 +43,7 @@
   position: relative;   /* 🔑 absolute için referans */
   width: 50%;
   padding: 120px 100px;
-  left: 303px;
+  left: 423px;
   bottom: 90px;
 }
 .about-text{
@@ -98,7 +118,7 @@
   width: 220px;
   height: 310px;
   bottom: 190px;
-  left: 255px;
+  left: 367px;
 }
 .vision-box{
   position: absolute;
@@ -154,11 +174,14 @@
   color:#0015ff;
   opacity: 0.6;
   bottom: 453px;
-  left: 630px;
+  left: 737px;
 }
 .between-text p{
   opacity: 0.6;
 }
+
+
+
 /* VISIÓN METNİ – soldan yavaş akma */
 .vision-anim {
   opacity: 0;

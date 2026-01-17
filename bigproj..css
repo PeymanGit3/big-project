@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box; 
 }
+
 :root{
   --blue: #0015FF;
 }
@@ -47,6 +48,8 @@
   padding: 9px 60px;
   border-bottom: 1px solid #ddd;
   background-color: white;
+
+  outline: 2px solid red;
 }
 .namebox{
   display: flex;
