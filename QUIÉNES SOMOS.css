@@ -180,8 +180,6 @@
   opacity: 0.6;
 }
 
-
-
 /* VISIÓN METNİ – soldan yavaş akma */
 .vision-anim {
   opacity: 0;
@@ -221,7 +219,7 @@
 
 /* üst resim */
 .value-img {
-  width: 100%;
+  width: 82%;
   height: 190px;
   overflow: hidden;
 }
@@ -279,6 +277,7 @@
 }
 
 .value-info.purple {
+  width: 82%;
   background: #e6ccff;
 }
 
@@ -408,11 +407,11 @@
 
 .process-title {
   position: relative;
-  width: 730px;
+  width: 840px;
   background: #f2f2f2;
-  padding: 25px 30px 25px 80px;
+  padding: 25px 30px 25px 200px;
   text-align: center;
-  top: -45px;
+  top: -75px;
   right: 50px;
 
   transform: translateX(-120px);
@@ -420,6 +419,8 @@
 }
 .process-title h2 {
   font-size: 42px;
+  width: 400px;
+  line-height: 1;
   color: #0015ff;
   letter-spacing: 4px;
   font-family: "GFSDidot-Regular";
@@ -429,7 +430,7 @@
 .process-image {
   position: relative;
   top: 160px;
-  right: 560px;
+  right: 660px;
   width: 380px;
   opacity: 0;
   transform: scale(0.95);
@@ -444,7 +445,7 @@
 .process-boxes {
   position: relative;
   top: 155px;
-  right: 565px;
+  right: 665px;
 }
 
 /* ORTAK KUTU */
@@ -587,7 +588,7 @@
 
 .process-image2 {
   position: relative;
-  left: 520px;
+  left: 620px;
   bottom: 80px;
   width: 370px;
   height: 200px;
@@ -601,7 +602,7 @@
 }
 .process-boxes2 {
   position: relative;
-  left: 310px;
+  left: 410px;
   bottom: 170px;
 }
 
@@ -716,7 +717,7 @@
 
 .process-image3 {
   position: relative;
-  left: 330px;
+  left: 430px;
   bottom: 155px;
   width: 350px;
   height: 200px;
@@ -730,7 +731,7 @@
 }
 .process-boxes3 {
   position: relative;
-  left: 310px;
+  left: 410px;
   bottom: 170px;
 }
 
@@ -839,7 +840,7 @@
 
 .process-image4 {
   position: relative;
-  left: 505px;
+  left: 605px;
   bottom: 80px;
   width: 350px;
   height: 220px;
@@ -853,7 +854,7 @@
 }
 .process-boxes4 {
   position: relative;
-  left: 350px;
+  left: 450px;
   bottom: 170px;
 }
 
@@ -965,7 +966,7 @@
 
 .process-image5 {
   position: relative;
-  left: 330px;
+  left: 430px;
   bottom: 310px;
   width: 350px;
   height: 200px;
@@ -979,7 +980,7 @@
 }
 .process-boxes5 {
   position: relative;
-  left: 380px;
+  left: 480px;
   bottom: 310px;
 }
 
@@ -1090,7 +1091,7 @@
 
 .process-image6 {
   position: relative;
-  left: 505px;
+  left: 615px;
   bottom: 215px;
   width: 350px;
   height: 220px;
@@ -1106,7 +1107,7 @@
   position: absolute;
   inset: 0;
   background-color: white;           
-  opacity: 0.23;
+  opacity: 0.3;
   transition: opacity 0.3s ease;
   z-index: 1;
   height: 186px;
@@ -1114,7 +1115,7 @@
 }
 .process-boxes6 {
   position: relative;
-  left: 360px;
+  left: 470px;
   bottom: 320px;
 }
 
@@ -1221,7 +1222,7 @@
 
 .process-image7 {
   position: relative;
-  left: 317px;
+  left: 418px;
   bottom: 150px;
   width: 350px;
   height: 200px;
@@ -1235,7 +1236,7 @@
 }
 .process-boxes7 {
   position: relative;
-  left: 360px;
+  left: 461px;
   bottom: 152px;
 }
 
@@ -1573,7 +1574,7 @@ input:focus {
 }
 
 .course-img.big{
-  margin-left: 300px;
+  margin-left: 420px;
 }
 .course-img.big img {
   width: 200px;
@@ -1601,7 +1602,7 @@ input:focus {
   letter-spacing: 1px;
   bottom: -22px;
   width: 180px;
-  left: 345px;
+  left: 465px;
   z-index: 2;
 }
 @font-face {
@@ -1614,7 +1615,7 @@ input:focus {
   font-size: 10px;
   font-family: "Outfit-Regular";
   top: 33px;
-  left: 343px;
+  left: 465px;
   line-height: 1.5;
   color: #0015FF;
   width: 410px;
@@ -1625,7 +1626,7 @@ input:focus {
   position: relative;
   display: flex;
   grid-column: span 2;
-  left: 341px;
+  left: 465px;
   bottom: 50px;
 }
 
