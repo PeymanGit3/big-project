@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "GFSDidot-Regular";
+  src: url(./fonts/GFSDidot-Regular.ttf);
+}
+
 .page-about {
   overflow-x: hidden;
 }
@@ -33,10 +38,6 @@
   color: #0015ff;
   z-index: 2;
   font-family:"GFSDidot-Regular";
-}
-@font-face {
-  font-family: "GFSDidot-Regular";
-  src: url(./fonts/GFSDidot-Regular.ttf);
 }
 
 .about-left {
@@ -1512,10 +1513,6 @@ input:focus {
   font-family: "Outfit-Bold";
   cursor: pointer;
 }
-@font-face {
-  font-family: "Outfit-Bold";
-  src: url(./fonts/Outfit-Bold.ttf);
-}
 .endendd3{
   position: relative;
   display: flex;
@@ -1604,10 +1601,6 @@ input:focus {
   width: 180px;
   left: 465px;
   z-index: 2;
-}
-@font-face {
-  font-family: "Outfit-Bold";
-  src: url(./fonts/Outfit-Bold.ttf);
 }
 
 .course-info p {

@@ -9,16 +9,12 @@
 }
 /*vvvvvvvvvvvvvvvvvvvv FONTS vvvvvvvvvvvvvvvvvvvvvvv*/
 @font-face{
-  font-family: "DMSans_18pt-Regular";
+  font-family: "DMSans_18pt-Regular";       /* for BLACK SECTION */
   src: url(./fonts/DMSans_18pt-Regular.ttf);
 }
 @font-face{
-  font-family: "DMSans_18pt-Medium";
-  src: url(./fonts/DMSans_18pt-Medium.ttf);
-}
-@font-face{
   font-family: "Oswald-Regular";
-  src: url(./fonts/Oswald-Regular.ttf);
+  src: url(./fonts/Oswald-Regular.ttf);      /* for brandname */
 }
 @font-face{
   font-family: "Outfit-Regular";
@@ -68,7 +64,7 @@
 }
 .brandname2{
   font-size: 8px;
-  font-family: "DMSans_18pt-Medium";
+  font-family: "Outfit-Medium";
   letter-spacing: 1.5px;
 }
 .brandname2:hover{
