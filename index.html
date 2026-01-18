@@ -8,10 +8,17 @@
 
     <link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_outward" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=sticky_note_2" />  
+
+    <script src="./section4.js"></script>
+    <script src="./reveal.js"></script>
+    <script src="./Hamburger.js"></script>
+    <script src="./Chat_button.js"></script>
+    <script src="./Form.js"></script>
+    <script src="./3thpage_scroll.js"></script>
    
 
 </head>
@@ -416,226 +423,6 @@
     </div>
   </div>
 </footer> 
-
-<!--========================= HAMBURGER JS ============================-->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".fa-bars");
-
-  /* mobile menu oluştur */
-  const mobileNav = document.createElement("div");
-  mobileNav.className = "mobile-nav";
-
-  mobileNav.innerHTML = `
-    <ul>
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">SHOP</a></li>
-      <li><a href="#">APRENDE Y CREA</a></li>
-      <li><a href="#">VISÍTANOS</a></li>
-      <li><a href="#">QUIÉNES SOMOS</a></li>
-      <li><a href="#">CONTACTO</a></li>
-    </ul>
-  `;
-
-  document.body.appendChild(mobileNav);
-
-  let isOpen = false;
-
-  hamburger.addEventListener("click", () => {
-    isOpen = !isOpen;
-
-    mobileNav.classList.toggle("open");
-
-    if (isOpen) {
-      hamburger.classList.remove("fa-bars");
-      hamburger.classList.add("fa-xmark");
-    } else {
-      hamburger.classList.remove("fa-xmark");
-      hamburger.classList.add("fa-bars");
-    }
-  });
-});
-
-mobileNav.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    mobileNav.classList.remove("open");
-    hamburger.classList.remove("fa-xmark");
-    hamburger.classList.add("fa-bars");
-    isOpen = false;
-  });
-});
-
-</script>
-
-
-<!--========================= SECTION4 JS ============================-->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const section4 = document.querySelector(".section4");
-  const animatedEls = section4.querySelectorAll(
-    ".anim-pink, .anim-pink-text, .anim-blue-img, .anim-blue-text, .anim-big-photo"
-  );
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animatedEls.forEach(el => {
-            el.style.animationPlayState = "running";
-          });
-          observer.disconnect(); 
-        }
-      });
-    },
-    {
-      threshold: 0.3  
-    }
-  );
-
-  observer.observe(section4);
-});
-</script>
-
-
-
-<!--========================= THE MOVABLE SECTION JS ============================-->
-<script>
-window.addEventListener("load", () => {
-
-  const scroller = window;
-  const windowBox = document.querySelector(".reveal-window");
-  const img = windowBox?.querySelector("img");
-
-  if (!windowBox || !img) {
-    console.log("Eleman bulunamad");
-    return;
-  }
-
-  function onScroll() {
-    const box = windowBox.getBoundingClientRect();
-
-    const viewportHeight = window.innerHeight;
-
-    const progress = Math.min(
-      1,
-      Math.max(
-        0,
-        (viewportHeight - box.top) / (viewportHeight + box.height)
-      )
-    );
-
-    const move = progress * (520 - 200);
-
-    img.style.transform = `translateY(${move}px)`;
-  }
-
-  scroller.addEventListener("scroll", onScroll);
-
-  onScroll();
-});
-</script>
-
-
-<!--========================= FORM JS ============================-->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const nameInput  = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const agreeInput = document.getElementById("agree");
-  const btn        = document.getElementById("subscribeBtn");
-
-  const setError = (el, on) => el.classList.toggle("is-error", on);
-
-  const nameValid  = () => nameInput.value.trim() !== "";
-  const emailValid = () => emailInput.value.trim() !== "" && emailInput.checkValidity();
-  const agreeValid  = () => agreeInput.value.trim() !== "";
-
-  // 1) For Name input
-  emailInput.addEventListener("focus", () => {
-    if (!nameValid()) setError(nameInput, true);
-    else setError(nameInput, false);
-  });
-
-   agreeInput.addEventListener("focus", () => {
-    if (!agreeValid()) setError(agreeInput, false);
-    else setError(agreeInput, true);
-  });
-
-  // 2) If Name+Email false and clicked checkbox -> them both be red.
-  agreeInput.addEventListener("change", () => {
-    const nOk = nameValid();
-    const eOk = emailValid();
-
-    if (!nOk) setError(nameInput, true);
-    if (!eOk) setError(emailInput, true);
-
-  // 3) If them both is red, clear to red
-    if (nOk) setError(nameInput, false);
-    if (eOk) setError(emailInput, false);
-  });
-
-  // 4) When clicked Subscribe, any blank/incorrect ones be red
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    const nOk = nameValid();
-    const eOk = emailValid();
-    const cOk = agreeInput.checked;
-
-    setError(nameInput, !nOk);
-    setError(emailInput, !eOk);
-    setError(agreeInput, !cOk);
-
-    // If all of them is right, can continue 
-    if (nOk && eOk && cOk) {
-      console.log("OK");
-    }
-  });
-
-    // If it's correct when you write it, remove red
-  nameInput.addEventListener("input", () => setError(nameInput, !nameValid()));
-  emailInput.addEventListener("input", () => setError(emailInput, !emailValid()));
-  agreeInput.addEventListener("input", () => setError(agreeInput, !agreeValid()));
-  
-
-});
-
-</script>
-
-
-<!--================================================ CHAT BUTTON JS ==================================================-->
-
-<script>
-(function () {
-
-  // Turning On/Off is entirely event delegation.
-  document.addEventListener("click", function (e) {
-
-    // OPEN CHAT
-    const openBtn = e.target.closest(".chat-btn");
-    if (openBtn) {
-      const overlay = document.getElementById("chatOverlay");
-      if (overlay) overlay.classList.add("active");
-      return;
-    }
-
-    // CLOSE CHAT(X)
-    const closeBtn = e.target.closest("#chatClose");
-    if (closeBtn) {
-      const overlay = document.getElementById("chatOverlay");
-      if (overlay) overlay.classList.remove("active");
-      return;
-    }
-
-    // OVERLAY CHECK MARK
-    if (e.target.classList.contains("chat-overlay")) {
-      e.target.classList.remove("active");
-    }
-  });
-
-})();
-</script>
-
 
 </body>
 </html>
