@@ -7,35 +7,34 @@
 :root{
   --blue: #0015FF;
 }
+/*vvvvvvvvvvvvvvvvvvvv FONTS vvvvvvvvvvvvvvvvvvvvvvv*/
 @font-face{
   font-family: "DMSans_18pt-Regular";
   src: url(./fonts/DMSans_18pt-Regular.ttf);
 }
-
-/*---------HEADER-----------*/
-.imp-wrapper{
-  width: 87%;
-  margin-left: 93px;
-  border: 2px solid white;
-  overflow: hidden;
-  padding-right: 4px;
-  padding-top: 4px;
-  margin-bottom: 14px;
+@font-face{
+  font-family: "DMSans_18pt-Medium";
+  src: url(./fonts/DMSans_18pt-Medium.ttf);
 }
-.imp{
-  height: calc(90vh - 160px); /* ekran yüksekliği */
-
-  overflow-y: auto;     /* ⬅️ scroll burada */
-  overflow-x: hidden;   /* yatay scroll olmasın */
-
-  padding: 0px 5px 5px 5px;
+@font-face{
+  font-family: "Oswald-Regular";
+  src: url(./fonts/Oswald-Regular.ttf);
 }
-.button1 button{
-  font-size: 12px;
-  border-radius: 20px;
-  padding: 4px 10px;
-  background-color: #D9F567;
+@font-face{
+  font-family: "Outfit-Regular";
+  src: url(./fonts/Outfit-Regular.ttf);
 }
+@font-face {
+  font-family: "Outfit-Medium";
+  src: url(./fonts/Outfit-Medium.ttf);
+}
+@font-face {
+  font-family: "Outfit-Bold";
+  src: url(./fonts/Outfit-Bold.ttf);
+}
+
+
+/*============================ HEADER ===============================*/
 .headerr{
   position: sticky;
   top: 0;
@@ -64,10 +63,6 @@
   font-size: 22px;
   font-family: "Oswald-Regular";
 }
-@font-face{
-  font-family: "Oswald-Regular";
-  src: url(./fonts/Oswald-Regular.ttf);
-}
 .brandname:hover{
   cursor: default;
 }
@@ -75,10 +70,6 @@
   font-size: 8px;
   font-family: "DMSans_18pt-Medium";
   letter-spacing: 1.5px;
-}
-@font-face{
-  font-family: "DMSans_18pt-Medium";
-  src: url(./fonts/DMSans_18pt-Medium.ttf);
 }
 .brandname2:hover{
   cursor: pointer;
@@ -116,7 +107,7 @@
   font-size: 16px;
 }
 .sents2 .fa-xmark {
-  font-size: 16px;   /* burayı istediğin gibi artır */
+  font-size: 16px;   
 }
 
 .headerimgs{
@@ -143,7 +134,7 @@
 }
 
 
-/*---------SECTION_1-----------*/
+/*================================= YELLOW SECTION ====================================*/
 .section2{
   position:relative;
   display: flex;
@@ -172,6 +163,10 @@
   align-items: flex-start;
   margin-bottom: 95px;
   margin-right: 192px;
+}
+.leftt a{
+  text-decoration: none;
+  color: var(--blue);
 }
 
 .leftt div:first-child{
@@ -229,7 +224,7 @@
   opacity: 0;
   transform: translateY(20px);
   animation: shopFade 0.6s ease forwards;
-  animation-delay: 0.5s; /* yazılardan sonra gelsin */
+  animation-delay: 0.5s; 
 }
 
 @keyframes shopFade {
@@ -247,7 +242,7 @@
 .yellow-box{
   position: absolute;
   top: -21px;
-  right: 240px;              /* resmin SAĞINDAN görünsün */
+  right: 240px;         
   width: 234px;
   height: 321px;
   background-color: #FFD814;
@@ -267,11 +262,10 @@
   }
 
   10% {
-    transform: translateX(425px); /* çok az ilerler */
+    transform: translateX(425px); 
     opacity: 0.8;
   }
 
-  /* hızlanma başlar */
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -283,7 +277,7 @@
   left: 50%;
   top: 100%; 
   margin-top: 70px;  
-  margin-left: -37px;          /* SHOP’un altına gelsin */
+  margin-left: -37px;         
   transform: translateX(-50%);
 
   height: 127px;
@@ -301,21 +295,22 @@
 
 @keyframes growLine {
   0% {
-    width: 1px;           /* ilk anda çok ince */
+    width: 1px;         
     opacity: 0;
   }
 
   40% {
-    width: 1.5px;         /* yavaş yavaş */
+    width: 1.5px;    
     opacity: 0.6;
   }
 
   100% {
-    width: 3px;           /* 🔥 şu anki kalınlık */
+    width: 3px;           
     opacity: 1;
   }
 }
 
+/*================================= BLUE SECTION ====================================*/
 .section3{
   display: flex;
 }
@@ -327,7 +322,6 @@
   left: 460px;
   top: 40px;
 
-  /* animasyon başlangıcı */
   transform: translateX(140px);
   opacity: 0;
 
@@ -342,8 +336,8 @@
 }
 .blue-back{
   position: absolute;
-  right: -11px;     /* resmin biraz SAĞINDA görünsün */
-  bottom: -45px;    /* biraz aşağı taşsın */
+  right: -11px;  
+  bottom: -45px;    
   width: 220px;
   height: 338px;
   background-color: #262EC7;
@@ -363,12 +357,11 @@
   margin-left: 500px;
   margin-top: 67px;
 
-  /* animasyon başlangıcı */
   opacity: 0;
   transform: translateX(-40px);
 
   animation: textReveal 0.8s ease-out forwards;
-  animation-delay: 0.35s; /* resimden SONRA gelsin */
+  animation-delay: 0.35s; 
 }
 .text-block p{
   margin-top: 0;
@@ -377,10 +370,6 @@
   line-height: 1.35;
   margin-bottom: 28px;
   margin-left: 13px;
-}
-@font-face{
-  font-family: "Outfit-Regular";
-  src: url(./fonts/Outfit-Regular.ttf);
 }
 .quote-mark{
   font-size: 200px;
@@ -407,10 +396,7 @@
   }
 }
 
-/* ---------------------------
-          SECTION4
----------------------------- */
-
+/*================================= PINK SECTION ====================================*/
 .section4{
   position: relative;
   display: flex;
@@ -420,7 +406,7 @@
   background-color: white;
   top: 24px;
 }
-/* section4 animasyonları başta kapalı */
+/* Animations of section4 are paused at first */
 .section4 .anim-pink,
 .section4 .anim-pink-text,
 .section4 .anim-blue-img,
@@ -467,10 +453,6 @@
   text-transform: lowercase;
   margin-bottom: 30px;
   max-width: 300px;
-}
-@font-face {
-  font-family: "Outfit-Medium";
-  src: url(./fonts/Outfit-Medium.ttf);
 }
 .anim-pink-text{
   opacity: 0;
@@ -587,6 +569,8 @@
   }
 }
 
+
+/*================================= THE MOVABLE SECTION ====================================*/
 .reveal-section{
   position: relative;
   display:block;
@@ -612,8 +596,7 @@
 }
 
 
-/*-----------------------------------------*/
-
+/*============================== FIRST FOOTER =================================*/
 .footer-section{
   position: relative;
   display: flex;
@@ -633,7 +616,7 @@
   margin-bottom: 0;
 }
 
-
+/*================= FORM ================*/
 .footer-col{
   position: relative;
   display: block;
@@ -642,7 +625,7 @@
   margin-right: -30px;
 }
 .footer-col.links{
-  margin-left: -60px;   /* 🔑 sola yaklaştırır */
+  margin-left: -60px;  
 }
 .footer-col.links:hover{
   cursor: pointer;
@@ -654,178 +637,6 @@
   font-size: 11px;
   margin-top: 40px;
 }
-
-/*================= FORM BUTTON ================*/
-/* OVERLAY */
-.chat-overlay{
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .25s ease;
-}
-.chat-overlay.active{
-  opacity: 1;
-  pointer-events: all;
-}
-.chat-btn{
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: #0015FF;
-  color: white;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 9998;
-  box-shadow: 0 8px 20px rgba(0,0,0,.25);
-}
-.chat-btn:hover{
-  transform: scale(1.05);
-}
-
-
-.chat-modal{
-  width: 320px;
-  height: auto;
-  max-height: 90vh;
-  background: var(--blue);
-  border-radius: 10px;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(0,0,0,.2);
-  padding: 22px 20px;
-  overflow: auto;
-  font-family: "Outfit-Regular";
-}
-
-
-/* X */
-.chat-close{
-  position: absolute;
-  top: 4px;
-  right: 6px;
-  border: none;
-  background: none;
-  font-size: 18px;
-  cursor: pointer;
-  line-height: 1;
-  color: white;
-}
-
-/* içerik */
-.chat-title{
-  font-size: 26px;
-  margin-bottom: 10px;
-  margin: 0 0 6px 0;
-  color: white;
-}
-.chat-sub{
-  font-size: 10px;
-  line-height: 1.4;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.chat-row{ margin-bottom: 8px; }
-.chat-label{
-  display: block;
-  font-size: 8px;
-  color: white;
-  margin-bottom: 3px;
-  letter-spacing: .5px;
-}
-.chat-input,
-.chat-textarea{
-  border: none;
-  border-bottom: 1.5px solid white;
-  background: transparent;
-  padding: 6px 0;
-  font-size: 12px;
-  color: white;
-}
-
-.chat-input:focus,
-.chat-textarea:focus{
-  outline: none;
-}
-
-.chat-textarea{ resize: none; }
-
-.chat-check{
-  display: flex;
-  gap: 6px;
-  align-items: flex-start;
-  margin: 8px 0 10px;
-}
-.chat-check input{
-  margin-top: -3px;
-}
-
-.chat-check input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-
-  width: 15px;
-  height: 15px;
-
-  border: 1.5px solid #0015FF;
-  background: white;
-
-  position: relative;
-  cursor: pointer;
-}
-.chat-check input[type="checkbox"]:checked {
-  background: white;   /* 🔥 önemli */
-}
-.chat-check input[type="checkbox"]:checked::after {
-  content: "";
-  position: absolute;
-
-  left: 4px;
-  top: 2px;
-  
-  width: 5px;
-  height: 7px;
-
-  border: solid #0015FF; 
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-
-.chat-check label{
-  font-size: 7px;
-  line-height: 1.2;
-  color: white;
-  opacity: .75;
-}
-.chat-check a{
-  color: white;
-  text-decoration: underline;
-}
-.chat-send{
-  margin-top: 10px;
-  align-self: center;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 11px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  margin-left: 115px;
-}
-/*================= FORM BUTTON ================*/
-
-
 /* -------- LEFT -------- */
 .social h4{
   font-size: 10px;
@@ -969,10 +780,7 @@ input:focus {
   font-family: "Outfit-Bold";
   cursor: pointer;
 }
-@font-face {
-  font-family: "Outfit-Bold";
-  src: url(./fonts/Outfit-Bold.ttf);
-}
+
 .endend{
   position: relative;
   display: flex;
@@ -1003,6 +811,171 @@ input:focus {
 }
 .links ul .lii{
    opacity: 0.5;
+}
+
+/*===================================== CHAT BUTTON ========================================*/
+.chat-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+.chat-overlay.active{
+  opacity: 1;
+  pointer-events: all;
+}
+.chat-btn{
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #0015FF;
+  color: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 9998;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+.chat-btn:hover{
+  transform: scale(1.05);
+}
+
+
+.chat-modal{
+  width: 320px;
+  height: auto;
+  max-height: 90vh;
+  background: var(--blue);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+  padding: 22px 20px;
+  overflow: auto;
+  font-family: "Outfit-Regular";
+}
+
+
+.chat-close{
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+  color: white;
+}
+
+.chat-title{
+  font-size: 26px;
+  margin-bottom: 10px;
+  margin: 0 0 6px 0;
+  color: white;
+}
+.chat-sub{
+  font-size: 10px;
+  line-height: 1.4;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.chat-row{ margin-bottom: 8px; }
+.chat-label{
+  display: block;
+  font-size: 8px;
+  color: white;
+  margin-bottom: 3px;
+  letter-spacing: .5px;
+}
+.chat-input,
+.chat-textarea{
+  border: none;
+  border-bottom: 1.5px solid white;
+  background: transparent;
+  padding: 6px 0;
+  font-size: 12px;
+  color: white;
+}
+
+.chat-input:focus,
+.chat-textarea:focus{
+  outline: none;
+}
+
+.chat-textarea{ resize: none; }
+
+.chat-check{
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  margin: 8px 0 10px;
+}
+.chat-check input{
+  margin-top: -3px;
+}
+
+.chat-check input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 15px;
+  height: 15px;
+
+  border: 1.5px solid #0015FF;
+  background: white;
+
+  position: relative;
+  cursor: pointer;
+}
+.chat-check input[type="checkbox"]:checked {
+  background: white;  
+}
+.chat-check input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+
+  left: 4px;
+  top: 2px;
+  
+  width: 5px;
+  height: 7px;
+
+  border: solid #0015FF; 
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.chat-check label{
+  font-size: 7px;
+  line-height: 1.2;
+  color: white;
+  opacity: .75;
+}
+.chat-check a{
+  color: white;
+  text-decoration: underline;
+}
+.chat-send{
+  margin-top: 10px;
+  align-self: center;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-left: 115px;
 }
 
 .template-info{
@@ -1113,14 +1086,12 @@ input:focus {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* GRID */
 .inspiration-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 26px;
 }
 
-/* CARD */
 .insp-card{
   position: relative;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
@@ -1136,14 +1107,13 @@ input:focus {
 .carddd{
   display: flex;
   flex-direction: column;
-  gap: 10px;   /* 👈 kart ile yazı arası mesafe */
+  gap: 10px; 
   height: 295px;
   margin-top: 30px;
   border-top: 1px solid whitesmoke;
   border-radius: 6px;
 }
 
-/* ALT YAZI — KARTIN DIŞINDA */
 .insp-name{
   font-size: 8px;
   color: #000;
@@ -1175,10 +1145,6 @@ input:focus {
   font-family: "DMSans_18pt-Regular";
   text-align: center;
 }
-@font-face{
-  font-family: "DMSans_18pt-Regular";
-  src: url(./fonts/DMSans_18pt-Regular.ttf);
-}
 /*=================================== FOOTER ==================================*/
 
 .wix-footer{
@@ -1201,9 +1167,9 @@ input:focus {
     max-content
     max-content
     max-content
-    1.5fr;          /* WIX açıklama kısmı */
+    1.5fr;         
 
-  column-gap: 10px;   /* 🔑 kolonlar arası mesafe */
+  column-gap: 10px;   
   width: fit-content;
   margin-top: -50px;
 }
@@ -1305,7 +1271,7 @@ input:focus {
   left: 49%;
   transform: translateX(-50%);
 
-  width: 206vh;                 /* 🔥 TAM EKRAN */
+  width: 206vh;              
   height: 1px;
   background: #e5e5e5;
 }
@@ -1347,21 +1313,18 @@ input:focus {
   cursor: pointer;
 }
 
-/* hover ile çıkan koyu katman */
 .card-overlay {
   position: absolute;
-  inset: 0;                 /* 🔥 top/right/bottom/left: 0 */
+  inset: 0;             
   background: rgba(0,0,0,0.45);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-/* hover olunca görünür */
 .insp-card:hover .card-overlay {
   opacity: 1;
 }
 
-/* yazı */
 .overlay-text {
   position: absolute;
   left: 14px;
@@ -1386,22 +1349,21 @@ input:focus {
   left: 327px;
 }
 
-
-/* sadece hata olunca */
 .is-error{
   border-color: #ff2a2a !important;
 }
 
-/* checkbox için (sen appearance none kullanıyorsun, o yüzden input'un border'ı var) */
 .fot input[type="checkbox"].is-error{
   border-color: #ff2a2a !important;
 }
 
 
+
+
+
 /*============================= RESPONSIVE ==============================*/
 
 /*------ HEADER (NAVBAR) ------*/
-/* varsayılan */
 .sents2 .fa-bars {
   display: none;
 }
