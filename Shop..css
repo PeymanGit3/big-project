@@ -189,19 +189,17 @@
     grid-template-columns: 1fr;
   }
 }
-/* image wrapper */
 .product-img-wrap {
   position: relative;
   overflow: hidden;
 }
 
-/* quick view bar */
 .quick-view {
   position: absolute;
   left: 0;
-  bottom: -40px;              /* başlangıçta gizli */
+  bottom: -40px;           
   width: 100%;
-  height: 28px;               /* ~10px hissi ama okunabilir */
+  height: 28px;          
   
   background: #F4F4F4;
   color: var(--blue);
@@ -219,7 +217,7 @@
   left: 0;
         
   width: 100%;
-  height: 36px;               /* ~10px hissi ama okunabilir */
+  height: 36px;             
   
   background: white;
   color: var(--blue);
@@ -233,7 +231,6 @@
   transition: 0.25s ease;
 }
 
-/* hover olunca çıksın */
 .product-card:hover .quick-view {
   opacity: 0.8;
   bottom: 0;
@@ -242,13 +239,11 @@
   opacity: 1;
   z-index: 1;
 }
-/* ikinci resim gizli */
 .img-back {
   opacity: 0;
   z-index: 2;
 }
 
-/* hover olunca değiş */
 .product-card:hover .img-front {
   opacity: 0;
 }

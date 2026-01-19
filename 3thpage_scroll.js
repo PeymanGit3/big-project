@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-active");
-          observer.unobserve(entry.target); // bir kez çalışsın
+          observer.unobserve(entry.target);
         }
       });
     },
     {
-      threshold: 0.2,                 // biraz daha geç tetiklensin
+      threshold: 0.2,               
       rootMargin: "0px 0px -90px 0px"
     }
   );

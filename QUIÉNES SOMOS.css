@@ -6,23 +6,7 @@
 .page-about {
   overflow-x: hidden;
 }
-
-.header3{
-  position: sticky;
-  top: 0;
-  z-index: 100;
-
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  align-items: center;
-  padding: 9px 60px;
-  border-bottom: 1px solid #ddd;
-  background-color: white;
-
-  outline: 2px solid floralwhite;
-}
-
+/*============================ QUIÉNES SOMOS ===============================*/
 .about-hero {
   display: flex;
   min-height: 100vh;
@@ -41,7 +25,7 @@
 }
 
 .about-left {
-  position: relative;   /* 🔑 absolute için referans */
+  position: relative;   
   width: 50%;
   padding: 120px 100px;
   left: 423px;
@@ -114,6 +98,7 @@
   width: 300px;
 }
 
+/*================================== VISION and TEXT =====================================*/
 .between-slide{
   position: relative;
   width: 220px;
@@ -196,7 +181,7 @@
   }
 }
 
-
+/*================================== 3 CARDS =====================================*/
 .values-section {
   position: relative;
   padding: 10px 90px;
@@ -295,7 +280,7 @@
   left: 0;
         
   width: 100%;
-  height: 36px;               /* ~10px hissi ama okunabilir */
+  height: 36px;             
   
   background: white;
   color: var(--blue);
@@ -312,13 +297,11 @@
   opacity: 1;
   z-index: 1;
 }
-/* ikinci resim gizli */
 .imgb {
   opacity: 0;
   z-index: 2;
 }
 
-/* hover olunca değiş */
 .value-img:hover .imgf {
   opacity: 0;
 }
@@ -345,27 +328,21 @@
   justify-content: center;
 
   transition: 0.25s ease;
-}
-.tt1 {
   opacity: 1;
   z-index: 1;
 }
-/* ikinci resim gizli */
+
 .tt2 {
   opacity: 0;
   z-index: 2;
 }
 
-/* hover olunca değiş */
 .value-info:hover .tt1 {
   opacity: 0;
 }
 .value-info:hover .tt2 {
   opacity: 1;
 }
-
-
-
 .borderr {
   padding: 20px 0;
 }
@@ -377,7 +354,7 @@
   left: 50%;
   transform: translateX(-50%);
   transform-origin: center;
-  width: 45%;              /* 🔥 KISALIK BURADAN */
+  width: 45%;           
   height: 1px;
   background: white;
 }
@@ -404,8 +381,6 @@
   
 }
 
-/* ================= TITLE ================= */
-
 .process-title {
   position: relative;
   width: 840px;
@@ -427,7 +402,6 @@
   font-family: "GFSDidot-Regular";
 }
 
-/* IMAGE */
 .process-image {
   position: relative;
   top: 160px;
@@ -442,14 +416,12 @@
   display: block;
 }
 
-/* BOXES */
 .process-boxes {
   position: relative;
   top: 155px;
   right: 665px;
 }
 
-/* ORTAK KUTU */
 .process-box {
   position: absolute;
   padding: 28px;
@@ -458,7 +430,6 @@
   right: 90px;
 }
 
-/* SARI */
 .process-box.green {
   background: #F7FF87;
   top: 0;
@@ -489,11 +460,10 @@
   bottom: 5px;
 }
 
-/* MAVİ BORDER */
 .process-box.outline {
   position: relative;
   border: 1.5px solid #0015ff;
-  top: 17px;        /* 🔥 tam oturmuyor */
+  top: 17px;      
   right: 17px;      
   background: transparent;
   z-index: 2;
@@ -525,20 +495,15 @@
   animation-delay: 0.7s;
 }
 
-/* SARİ KUTU — resmin içinden biraz çıkar */
 .anim-green {
   opacity: 0;
-  transform: translateX(-60px);   /* 🔑 */
+  transform: translateX(-60px);   
 }
 
-/* MAVİ BORDER — daha DERİNDEN çıkar */
 .anim-outline {
   opacity: 0;
-  transform: translateX(-60px);  /* 🔑 */
+  transform: translateX(-60px); 
 }
-
-
-/* KEYFRAMES */
 
 @keyframes slideTitle {
   to {
@@ -585,7 +550,6 @@
   gap: 80px;
   bottom: 400px;
 }
-/*======= REVERSE ========*/
 
 .process-image2 {
   position: relative;
@@ -659,6 +623,9 @@
   transform: translateX(-60px);
 }
 
+
+/* ================= ANIMATIONS ================= */
+
 .animate-on-scroll.is-active .process-image2 {
   animation: imageReveal 0.6s ease forwards;
   animation-delay: 0.5s;
@@ -714,7 +681,6 @@
   gap: 80px;
   bottom: 400px;
 }
-/*======= REVERSE ========*/
 
 .process-image3 {
   position: relative;
@@ -784,6 +750,9 @@
   transform: translateX(-60px);
 }
 
+
+/* ================= ANIMATIONS ================= */
+
 .animate-on-scroll.is-active .process-image3 {
   animation: imageReveal 0.6s ease forwards;
   animation-delay: 0.5s;
@@ -837,8 +806,6 @@
   gap: 80px;
   bottom: 547px;
 }
-/*======= REVERSE ========*/
-
 .process-image4 {
   position: relative;
   left: 605px;
@@ -910,6 +877,9 @@
   transform: translateX(-60px);
 }
 
+
+/* ================= ANIMATIONS ================= */
+
 .animate-on-scroll.is-active .process-image4 {
   animation: imageReveal 0.6s ease forwards;
   animation-delay: 0.5s;
@@ -963,7 +933,6 @@
   gap: 80px;
   bottom: 400px;
 }
-/*======= REVERSE ========*/
 
 .process-image5 {
   position: relative;
@@ -1033,6 +1002,9 @@
   transform: translateX(-60px);
 }
 
+
+/* ================= ANIMATIONS ================= */
+
 .animate-on-scroll.is-active .process-image5 {
   animation: imageReveal 0.6s ease forwards;
   animation-delay: 0.5s;
@@ -1088,7 +1060,6 @@
   gap: 80px;
   bottom: 600px;
 }
-/*======= REVERSE ========*/
 
 .process-image6 {
   position: relative;
@@ -1182,6 +1153,10 @@
 
   transform: translateX(-60px);
 }
+
+
+/* ================= ANIMATIONS ================= */
+
 .animate-on-scroll.is-active .process-box6.color6 {
   animation: greenSlide 0.6s ease forwards;
   animation-delay: 0.6s;
@@ -1219,7 +1194,6 @@
 
   margin-bottom: -300px;
 }
-/*======= REVERSE ========*/
 
 .process-image7 {
   position: relative;
@@ -1292,6 +1266,9 @@
   transform: translateX(-60px);
 }
 
+
+/* ================= ANIMATIONS ================= */
+
 .animate-on-scroll.is-active .process-image7 {
   animation: imageReveal 0.6s ease forwards;
   animation-delay: 0.8s;
@@ -1334,217 +1311,8 @@
   }
 }
 
-.footer-section3{
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  align-items: flex-start;
-  background: white;
-  color: #0015FF;
-  font-family: sans-serif;
-  padding: 0 320px;
 
-  
-  bottom: 0;
-}
-.footer-section3 *:last-child{
-  margin-bottom: 0;
-}
-.footer-col3{
-  position: relative;
-  display: block;
-  flex-direction: column;
-  gap: 12px;
-  margin-right: -30px;
-}
-.footer-col3.links3{
-  margin-left: -60px;   /* 🔑 sola yaklaştırır */
-}
-.footer-col3.links3:hover{
-  cursor: pointer;
-}
-.footer-section3 span{
-  display: block;
-  width: 100%;
-  text-align: center;
-  font-size: 11px;
-  margin-top: 40px;
-}
-/* -------- LEFT -------- */
-.social3 h4{
-  font-size: 10px;
-  font-weight: 500;
-  margin-left: 5px;
-}
-
-.social-icons3{
-  display: flex;
-  gap: 1px;
-  margin-top: 30px;
-}
-
-.social-icons3 i{
-  width: 22px;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-}
-.social-icons3 i:hover{
-  cursor: pointer;
-}
-
-.made3{
-  font-size: 9px;
-  margin-top: 6px;
-  margin-left: 5px;
-}
-
-/* -------- CENTER -------- */
-.newsletter3 h4{
-  font-size: 10px;
-  font-weight: 700;
-  margin-bottom: 33px;
-}
-.inputs3{
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  bottom: 15px;
-}
-input:focus {
-  outline: none;
-  border-color: inherit;
-  box-shadow: none;
-}
-
-
-
-.inputs3 #in1{
-  margin-top: 10px;
-}
-.inputs3 input[type="text"]{
-  max-width: 180px;
-  padding: 5px;
-}
-.inputs3 input[type="email"]{
-  max-width: 180px;
-  padding: 5px;
-}
-.subtitle3{
-  font-size: 9.5px;
-  margin-bottom: 10px;
-}
-
-.newsletter3 input{
-  width: 260px;
-  padding: 8px 10px;
-  border: 1.5px solid #0015FF;
-  background: transparent;
-  font-size: 11px;
-}
-
-.privacy3{
-  flex-direction: column;
-  font-size: 9px;
-  display: flex;
-  gap: 6px;
-  width: 180px;
-}
-.fot3{
-  display: flex;
-  align-items: center;   /* 🔑 dikey hizalama */
-  gap: 8px;              /* checkbox – yazı arası */
-  margin-top: 7px;     
-}
-.fot3 p{
-  font-family: "Outfit-Regular";    
-}
-.fot3 p:hover{
-  cursor: pointer;    
-}
-.fot3 input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-
-  width: 20px;
-  height: 20px;
-
-  border: 1.5px solid #0015FF;
-  background: white;
-
-  position: relative;
-  cursor: pointer;
-}
-.fot3 input[type="checkbox"]:checked {
-  background: white;   /* 🔥 önemli */
-}
-.fot3 input[type="checkbox"]:checked::after {
-  content: "";
-  position: absolute;
-
-  left: 8px;
-  top: 4px;
-  
-  width: 5px;
-  height: 9px;
-
-  border: solid #0015FF;   /* 🔵 mavi tik */
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-
-.privacy3 a{
-  color: #0015FF;
-  text-decoration: underline;
-}
-
-.subscribe-btn3{
-  margin-top: 16px;
-  padding: 7px;
-  width: 180px;
-  background: #0015FF;
-  color: white;
-  border: none;
-  font-size: 10px;
-  font-family: "Outfit-Bold";
-  cursor: pointer;
-}
-.endendd3{
-  position: relative;
-  display: flex;
-  margin-top: 4px;
-  right: 2px;
-  align-items: center;
-}
-.endendd3 span{
-  font-family: "Outfit-Regular";
-  font-size: 9px;
-  font-weight: bold;
-}
-
-/* -------- RIGHT -------- */
-.links3 h4{
-  font-size: 10px;
-  opacity: 0.5;
-}
-
-.links3 ul{
-  list-style: none;
-  padding: 0;
-  font-size: 10px;
-  line-height: 2;
-}
-.links3 ul .Po3{
-  margin-top: 16px;
-}
-.links3 ul .lii3{
-   opacity: 0.5;
-}
-
+/*============================ ADD PART =============================*/
 
 .course-section{
   position: relative;
@@ -1661,6 +1429,217 @@ input:focus {
   font-family: "Outfit-Regular";
   cursor: pointer;
   transition: all .3s ease;
+}
+
+
+/*============================== FIRST FOOTER =================================*/
+
+.footer-section3{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+  background: white;
+  color: #0015FF;
+  font-family: sans-serif;
+  padding: 0 320px;
+
+  
+  bottom: 0;
+}
+.footer-section3 *:last-child{
+  margin-bottom: 0;
+}
+.footer-col3{
+  position: relative;
+  display: block;
+  flex-direction: column;
+  gap: 12px;
+  margin-right: -30px;
+}
+.footer-col3.links3{
+  margin-left: -60px;   
+}
+.footer-col3.links3:hover{
+  cursor: pointer;
+}
+.footer-section3 span{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  margin-top: 40px;
+}
+
+.social3 h4{
+  font-size: 10px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.social-icons3{
+  display: flex;
+  gap: 1px;
+  margin-top: 30px;
+}
+
+.social-icons3 i{
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.social-icons3 i:hover{
+  cursor: pointer;
+}
+
+.made3{
+  font-size: 9px;
+  margin-top: 6px;
+  margin-left: 5px;
+}
+
+.newsletter3 h4{
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 33px;
+}
+.inputs3{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  bottom: 15px;
+}
+input:focus {
+  outline: none;
+  border-color: inherit;
+  box-shadow: none;
+}
+
+.inputs3 #in1{
+  margin-top: 10px;
+}
+.inputs3 input[type="text"]{
+  max-width: 180px;
+  padding: 5px;
+}
+.inputs3 input[type="email"]{
+  max-width: 180px;
+  padding: 5px;
+}
+.subtitle3{
+  font-size: 9.5px;
+  margin-bottom: 10px;
+}
+
+.newsletter3 input{
+  width: 260px;
+  padding: 8px 10px;
+  border: 1.5px solid #0015FF;
+  background: transparent;
+  font-size: 11px;
+}
+
+.privacy3{
+  flex-direction: column;
+  font-size: 9px;
+  display: flex;
+  gap: 6px;
+  width: 180px;
+}
+.fot3{
+  display: flex;
+  align-items: center;   
+  gap: 8px;              
+  margin-top: 7px;     
+}
+.fot3 p{
+  font-family: "Outfit-Regular";    
+}
+.fot3 p:hover{
+  cursor: pointer;    
+}
+.fot3 input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 20px;
+  height: 20px;
+
+  border: 1.5px solid #0015FF;
+  background: white;
+
+  position: relative;
+  cursor: pointer;
+}
+.fot3 input[type="checkbox"]:checked {
+  background: white;   
+}
+.fot3 input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+
+  left: 8px;
+  top: 4px;
+  
+  width: 5px;
+  height: 9px;
+
+  border: solid #0015FF;   /* mavi tik */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
+.privacy3 a{
+  color: #0015FF;
+  text-decoration: underline;
+}
+
+.subscribe-btn3{
+  margin-top: 16px;
+  padding: 7px;
+  width: 180px;
+  background: #0015FF;
+  color: white;
+  border: none;
+  font-size: 10px;
+  font-family: "Outfit-Bold";
+  cursor: pointer;
+}
+.endendd3{
+  position: relative;
+  display: flex;
+  margin-top: 4px;
+  right: 2px;
+  align-items: center;
+}
+.endendd3 span{
+  font-family: "Outfit-Regular";
+  font-size: 9px;
+  font-weight: bold;
+}
+
+/* -------- RIGHT -------- */
+.links3 h4{
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.links3 ul{
+  list-style: none;
+  padding: 0;
+  font-size: 10px;
+  line-height: 2;
+}
+.links3 ul .Po3{
+  margin-top: 16px;
+}
+.links3 ul .lii3{
+   opacity: 0.5;
 }
 
 /* ===================== PAGE 3 – RESPONSIVE ===================== */

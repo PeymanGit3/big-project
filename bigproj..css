@@ -1352,20 +1352,56 @@ input:focus {
 .fot input[type="checkbox"].is-error{
   border-color: #ff2a2a !important;
 }
-
-
-
-
-
-/*============================= RESPONSIVE ==============================*/
-
-/*------ HEADER (NAVBAR) ------*/
 .sents2 .fa-bars {
   display: none;
 }
 
-/* tablet ve altı */
+
+/*============================= RESPONSIVE ==============================*/
+
+@media(max-width: 1200px) {
+
+  /* Genel padding daralt */
+  .headerr,
+  .section2,
+  .section3,
+  .section4,
+  .footer-section,
+  .template-info,
+  .inspiration-section,
+  .cta-section,
+  .wix-footer {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+  }
+
+  /* Sabit genişlikleri yumuşat */
+  .wix-footer {
+    width: 100%;
+  }
+
+  /* Büyük itelemeleri küçült */
+  .img1 {
+    margin-left: 6rem;
+  }
+
+  .img2 {
+    left: 6rem;
+  }
+
+  .text-block {
+    margin-left: 6rem;
+  }
+
+  .footer-section {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+/*------------------------------------------- IPAD RESPONSIVE -----------------------------------------------*/ 
 @media (max-width: 1024px) {
+
   .sents2 ul li {
     display: none;
   }
@@ -1378,79 +1414,91 @@ input:focus {
   .headerr {
     padding: 10px 20px;
   }
-}
 
-/*------ HERO (section2) ------*/
-@media (max-width: 768px) {
-
-  .section2 {
-    flex-direction: column;
-    padding: 40px 20px;
+    /* HEADER */
+  .sents2 ul li {
+    display: none;
   }
 
-  .leftt {
-    position: static;
-    align-items: center;
-    margin: 0;
-    text-align: center;
+  .sents2 .fa-bars {
+    display: block;
+    margin-left: 0.75rem;
+  }
+
+  .headerr {
+    justify-content: space-between;
+  }
+
+  /* SECTION 2 */
+  .section2 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .section2 {
+    padding-top: 2rem;
+  }
+    .img2 {
+    top: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .text-block {
+    margin-top: 0;
   }
 
   .img1 {
-    margin: 20px 0 0 0;
+    margin-left: 3rem;
   }
 
-  .img1 img {
-    width: 100%;
-    max-width: 260px;
-    height: auto;
-  }
-
-  .yellow-box {
-    display: none; /* mobile’da gerek yok */
-  }
+.yellow-box{
+  position: absolute;
+  display: block;
+  bottom: 130px;
+  right: -140px;         
+  width: 234px;
+  height: 321px;
+  background-color: #FFD814;
+  z-index: -2;
+}
 
   .dot-line {
     display: none;
   }
-}
 
-/*------ SECTION 3 – Text + Image ------*/
-@media (max-width: 768px) {
-
+  /* SECTION 3 */
   .section3 {
     flex-direction: column;
     align-items: center;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .img2 {
     left: 0;
-    top: 0;
-    transform: none;
+    margin-bottom: 2rem;
   }
 
   .text-block {
-    margin: 30px 0 0 0;
+    margin-left: 0;
     text-align: center;
   }
 
   .quote-mark {
-    font-size: 120px;
+    font-size: clamp(5rem, 12vw, 7rem);
+    margin-bottom: -2rem;
   }
-}
 
-
-/*------ SECTION 4 (Pink / Blue) – Stack Layout ------*/
-@media (max-width: 1024px) {
-
+  /* SECTION 4 */
   .section4 {
     flex-direction: column;
-    gap: 30px;
+    gap: 3rem;
   }
 
   .pink-panel {
     width: 100%;
     height: auto;
-    padding: 40px;
+    padding: 3rem;
   }
 
   .pink-div,
@@ -1461,61 +1509,176 @@ input:focus {
   }
 
   .blue-panel {
-    width: 100%;
     right: 0;
     bottom: 0;
+    width: 100%;
+    height: auto;
   }
 
   .bigphoto {
     margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+} 
+
+/*------------------------------------------- PHONE RESPONSIVE --------------------------------------------------*/ 
+@media (max-width: 768px) { 
+  body {
+    overflow-x: hidden;
   }
 
-  .big-photo {
+  /* PADDING */
+  .headerr,
+  .section2,
+  .section3,
+  .section4,
+  .footer-section,
+  .template-info,
+  .inspiration-section,
+  .cta-section,
+  .wix-footer {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  /* SECTION 2 */
+  .section2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section3 {
+    padding-bottom: -10rem;
+    overflow: hidden;
+  }
+  .leftt {
+    position: static;
+    align-items: center;
+    margin: 0;
+  }
+
+  .title {
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+  }
+
+  .img1 {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  .img2 {
+    margin-bottom: 1rem;
+  }
+
+  .text-block {
+    margin-top: 0;
+  }
+
+  /* SECTION 3 */
+  .text-block {
+    max-width: 100%;
+  }
+
+  .text-block p {
+    font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+  }
+
+  .know-btn {
+    margin-left: 0;
+  }
+
+  /* SECTION 4 */
+  .pink-title {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+  .section3 {
+    margin-top: -2rem;
+  }
+  .blue-img {
     width: 100%;
-    max-width: 300px;
+    height: auto;
+    margin: 0;
   }
-}
 
+  .blue-text {
+    width: 100%;
+    font-size: 1rem;
+  }
 
-/*------ FOOTER – Mobile Grid ------*/
-@media (max-width: 768px) {
+  .bigphoto {
+    display: none;
+  }
 
+  /* FOOTER FIRST */
   .footer-section {
     flex-direction: column;
-    padding: 40px 20px;
-    gap: 30px;
+    gap: 2.5rem;
   }
 
   .footer-col {
     margin: 0;
   }
 
-  .wix-footer {
-    width: 100%;
-    padding: 40px 20px;
-  }
-
+  /* WIX FOOTER */
   .footer-grid {
     grid-template-columns: 1fr;
-    row-gap: 20px;
+    row-gap: 2rem;
   }
 
   .footer-bottom {
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .footer-bottom::before {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+  .footer-legal {
+    left: 0;
+    justify-content: center;
+  }
+} 
+
+/*------------------------------------------- EXTRA SMALL RESPONSIVE --------------------------------------------------*/ 
+@media (max-width: 480px) { 
+  /* TYPOGRAPHY */
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .cta-box {
+    font-size: clamp(1.6rem, 6vw, 2rem);
+    padding: 2rem 1rem;
+  }
+
+  /* CARDS */
+  .inspiration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CHAT BUTTON */
+  .chat-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  .chat-modal {
+    width: 92vw;
   }
 }
 
 
-/*------ TAGS ------*/
-@media (max-width: 480px) {
-  .tags {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 6px;
-  }
-}
+
+
+
+
+
+
 
 /*HAMBURGER*/
 /* ================= MOBILE NAV ================= */
@@ -1557,255 +1720,3 @@ input:focus {
 .mobile-nav ul li a:hover{
   color: #FFD814;
 }
-
-/* sadece mobile */
-@media (min-width: 1025px) {
-  .mobile-nav {
-    display: none;
-  }
-}
-
-
-/*------------------------------------------- IPAD RESPONSIVE -----------------------------------------------*/
-@media (max-width: 1024px) {
-
-  /* GENEL */
-  .imp-wrapper {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* HERO */
-  .section2 {
-    padding: 60px 40px;
-  }
-
-  .img1 {
-    margin-left: 0;
-  }
-
-  .leftt {
-    margin-right: 0;
-    align-items: flex-start;
-  }
-
-  /* SECTION 3 */
-  .section3 {
-    justify-content: center;
-  }
-
-  .img2 {
-    left: 0;
-  }
-
-  .text-block {
-    margin-left: 40px;
-  }
-
-  /* SECTION 4 */
-  .section4 {
-    flex-direction: column;
-    gap: 50px;
-    padding: 40px;
-  }
-
-  .pink-panel {
-    width: 100%;
-  }
-
-  .pink-div,
-  .pink-btn {
-    left: 0;
-    margin-left: 0;
-  }
-
-  .blue-panel {
-    right: 0;
-    bottom: 0;
-  }
-
-  .bigphoto {
-    margin-left: 0;
-  }
-
-  /* FOOTER */
-  .footer-section {
-    padding: 0 80px;
-  }
-
-  .wix-footer {
-    width: 100%;
-    padding: 60px 80px;
-  }
-}
-
-
-/*------------------------------------------- PHONE RESPONSIVE --------------------------------------------------*/
-@media (max-width: 768px) {
-
-  /* HERO */
-  .section2 {
-    flex-direction: column;
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .leftt {
-    position: static;
-    align-items: center;
-    margin: 0;
-  }
-
-  .title {
-    font-size: 26px;
-  }
-
-  .shop button {
-    padding: 10px 40px;
-  }
-
-  .img1 {
-    margin: 30px 0 0 0;
-  }
-
-  .img1 img {
-    width: 100%;
-    max-width: 260px;
-    height: auto;
-  }
-
-  .yellow-box,
-  .dot-line {
-    display: none;
-  }
-
-  /* SECTION 3 */
-  .section3 {
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-  }
-
-  .img2 {
-    position: relative;
-    left: 0;
-    top: 0;
-    transform: none;
-  }
-
-  .text-block {
-    margin: 30px 0 0 0;
-    text-align: center;
-    transform: none;
-  }
-
-  .quote-mark {
-    font-size: 120px;
-    margin-bottom: -40px;
-  }
-
-  /* SECTION 4 */
-  .section4 {
-    flex-direction: column;
-    padding: 40px 20px;
-  }
-
-  .pink-panel {
-    width: 100%;
-    height: auto;
-    padding: 40px 20px;
-  }
-
-  .pink-title {
-    font-size: 22px;
-  }
-
-  .pink-btn {
-    margin: 20px auto 0;
-    display: block;
-  }
-
-  .blue-panel {
-    width: 100%;
-    height: auto;
-  }
-
-  .blue-img {
-    width: 100%;
-    height: auto;
-    margin: 0;
-  }
-
-  .blue-text {
-    width: 100%;
-    font-size: 14px;
-  }
-
-  .bigphoto {
-    display: none; /* mobile’da bu görsel ağır */
-  }
-
-  /* REVEAL */
-  .reveal-section {
-    height: 500px;
-    bottom: 0;
-  }
-
-  .reveal-window img {
-    height: 400px;
-  }
-
-  /* FOOTER */
-  .footer-section {
-    flex-direction: column;
-    padding: 40px 20px;
-    gap: 40px;
-  }
-
-  .footer-col {
-    margin: 0;
-  }
-
-  .wix-footer {
-    padding: 40px 20px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .footer-bottom::before {
-    width: 100%;
-  }
-
-}
-
-/*------------------------------------------- EXTRA SMALL RESPONSIVE --------------------------------------------------*/
-@media (max-width: 480px) {
-
-  .title {
-    font-size: 22px;
-  }
-
-  .cta-box {
-    font-size: 26px;
-    padding: 30px;
-  }
-
-  .inspiration-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-
-
-

@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".fa-bars");
 
-  /* mobile menu oluştur */
   const mobileNav = document.createElement("div");
   mobileNav.className = "mobile-nav";
 
