@@ -321,8 +321,8 @@
 <footer class="wix-footer">
   <div class="footer-grid">
     <div class="footer-foots">
-      <h5>Product</h5>
-      <ul>
+      <h5 class="footer-title">Product</h5>
+      <ul class="footer-list">
         <li><a href="#">Website Templates</a></li>
         <li><a href="#">Website Builder</a></li>
         <li><a href="#">Website Design</a></li>
@@ -337,8 +337,8 @@
     </div>
 
     <div class="footer-foots">
-      <h5>Solutions</h5>
-      <ul>
+      <h5 class="footer-title">Solutions</h5>
+      <ul class="footer-list">
         <li><a href="#">Online Store</a></li>
         <li><a href="#">Online Booking</a></li>
         <li><a href="#">Blog Website</a></li>
@@ -354,8 +354,8 @@
     </div>
 
     <div class="footer-foots">
-      <h5>Learn</h5>
-      <ul>
+      <h5 class="footer-title">Learn</h5>
+      <ul class="footer-list">
         <li><a href="#">Wix Blog</a></li>
         <li><a href="#">Privacy and Security Hub</a></li>
         <li><a href="#">SEO Learning Hub</a></li>
@@ -364,8 +364,8 @@
     </div>
 
     <div class="footer-foots">
-      <h5>Support</h5>
-      <ul>
+      <h5 class="footer-title">Support</h5>
+      <ul class="footer-list">
         <li><a href="#">Help Center</a></li>
         <li><a href="#">Hire a Professional</a></li>
         <li><a href="#">Report Abuse</a></li>
@@ -373,9 +373,9 @@
       </ul>
     </div>
 
-    <div class="footer-foots">
-      <h5>Company</h5>
-      <ul> 
+    <div class="footer-foots end">
+      <h5 class="footer-title">Company</h5>
+      <ul class="footer-list"> 
         <li><a href="#">Channel Partnerships</a></li>
         <li><a href="#">Press & Media</a></li>
         <li><a href="#">Investor Relations</a></li>
@@ -422,6 +422,24 @@
     </div>
   </div>
 </footer> 
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const isMobile = () => window.innerWidth <= 768;
+
+  document.querySelectorAll(".footer-title").forEach(title => {
+    title.addEventListener("click", () => {
+
+      if (!isMobile()) return;
+
+      const parent = title.parentElement;
+      parent.classList.toggle("open");
+    });
+  });
+
+});
+</script>
 
 </body>
 </html>

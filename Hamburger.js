@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mobileNav.innerHTML = `
     <ul>
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">SHOP</a></li>
+      <li><a href="./index.html">HOME</a></li>
+      <li><a href="./Shop.html">SHOP</a></li>
       <li><a href="#">APRENDE Y CREA</a></li>
       <li><a href="#">VISÍTANOS</a></li>
-      <li><a href="#">QUIÉNES SOMOS</a></li>
+      <li><a href="./QUIÉNES_SOMOS.html">QUIÉNES SOMOS</a></li>
       <li><a href="#">CONTACTO</a></li>
     </ul>
   `;
