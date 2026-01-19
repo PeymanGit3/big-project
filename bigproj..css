@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box; 
 }
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 :root{
   --blue: #0015FF;
@@ -32,7 +37,8 @@
 
 /*============================ HEADER ===============================*/
 .headerr{
-  position: sticky;
+  position:fixed;
+  width: 100%;
   top: 0;
   z-index: 100;
 
@@ -1359,9 +1365,9 @@ input:focus {
 
 /*============================= RESPONSIVE ==============================*/
 
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
 
-  /* Genel padding daralt */
+  /* Genel padding yumuşatma */
   .headerr,
   .section2,
   .section3,
@@ -1371,99 +1377,69 @@ input:focus {
   .inspiration-section,
   .cta-section,
   .wix-footer {
-    padding-left: 4rem !important;
-    padding-right: 4rem !important;
-  }
-
-  /* Sabit genişlikleri yumuşat */
-  .wix-footer {
-    width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   /* Büyük itelemeleri küçült */
-  .img1 {
-    margin-left: 6rem;
+  .img1,
+  .text-block {
+    margin-left: 4rem;
   }
 
   .img2 {
-    left: 6rem;
+    left: 4rem;
+  }
+  .img1{
+    position: relative;
+    left: 190px;
   }
 
-  .text-block {
-    margin-left: 6rem;
-  }
-
-  .footer-section {
-    padding-left: 6rem;
-    padding-right: 6rem;
+  .yellow-box {
+      position: absolute;
+      top: -21px;
+      right: 50px;         
+      width: 234px;
+      height: 321px;
+      background-color: #FFD814;
+      z-index: -2;
   }
 }
 
 /*------------------------------------------- IPAD RESPONSIVE -----------------------------------------------*/ 
 @media (max-width: 1024px) {
-
   .sents2 ul li {
     display: none;
   }
-
+  .img1,
+  .img2,
+  .text-block,
+  .bigphoto {
+    margin-left: 0 !important;
+    left: auto !important;
+    right: auto !important;
+  }
   .sents2 .fa-bars {
     display: block;
-    margin-left: 10px;
-  }
-
-  .headerr {
-    padding: 10px 20px;
-  }
-
-    /* HEADER */
-  .sents2 ul li {
-    display: none;
-  }
-
-  .sents2 .fa-bars {
-    display: block;
-    margin-left: 0.75rem;
-  }
-
-  .headerr {
-    justify-content: space-between;
   }
 
   /* SECTION 2 */
   .section2 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
-
-  .section2 {
-    padding-top: 2rem;
+  .img1{
+    position: absolute;
+    left: 190px;
   }
-    .img2 {
-    top: 0;
-    margin-bottom: 1.5rem;
-  }
-
-  .text-block {
-    margin-top: 0;
-  }
-
-  .img1 {
-    margin-left: 3rem;
-  }
-
-.yellow-box{
-  position: absolute;
-  display: block;
-  bottom: 130px;
-  right: -140px;         
-  width: 234px;
-  height: 321px;
-  background-color: #FFD814;
-  z-index: -2;
-}
-
-  .dot-line {
-    display: none;
+  /* SARI DIV GÖRÜNÜR AMA KONUM DEĞİŞİR */
+  .yellow-box {
+      position: absolute;
+      top: -21px;
+      left: 8px;         
+      width: 234px;
+      height: 321px;
+      background-color: #FFD814;
+      z-index: -2;
   }
 
   /* SECTION 3 */
@@ -1471,64 +1447,32 @@ input:focus {
     flex-direction: column;
     align-items: center;
     margin-top: 0;
-    padding-top: 0;
   }
 
   .img2 {
     left: 0;
-    margin-bottom: 2rem;
+    top: 0;
+    margin-bottom: 1.5rem;
   }
 
   .text-block {
     margin-left: 0;
     text-align: center;
   }
-
-  .quote-mark {
-    font-size: clamp(5rem, 12vw, 7rem);
-    margin-bottom: -2rem;
-  }
-
-  /* SECTION 4 */
-  .section4 {
-    flex-direction: column;
-    gap: 3rem;
-  }
-
-  .pink-panel {
-    width: 100%;
-    height: auto;
-    padding: 3rem;
-  }
-
-  .pink-div,
-  .pink-btn {
-    left: 0;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .blue-panel {
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-  }
-
-  .bigphoto {
-    margin-left: 0;
-    display: flex;
-    justify-content: center;
-  }
 } 
 
 /*------------------------------------------- PHONE RESPONSIVE --------------------------------------------------*/ 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
+
   body {
     overflow-x: hidden;
   }
+.dot-line{
+  display: none;
+}
 
-  /* PADDING */
+
+  /* GENEL */
   .headerr,
   .section2,
   .section3,
@@ -1538,139 +1482,80 @@ input:focus {
   .inspiration-section,
   .cta-section,
   .wix-footer {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   /* SECTION 2 */
   .section2 {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 1.25rem;
   }
-
-  .section3 {
-    padding-bottom: -10rem;
-    overflow: hidden;
-  }
+.div-wrap{
+  margin-top: 20px;
+}
   .leftt {
     position: static;
     align-items: center;
+    text-align: center;
     margin: 0;
   }
 
-  .title {
-    font-size: clamp(1.8rem, 6vw, 2.2rem);
-  }
-
   .img1 {
-    margin-left: 0;
-    margin-top: 2rem;
-  }
-  .img2 {
-    margin-bottom: 1rem;
-  }
-
-  .text-block {
-    margin-top: 0;
+    order: 2;                 /* SHOP’tan sonra */
+    position: relative;
+    bottom: 340px;
+    margin-bottom: -300px;
   }
 
   /* SECTION 3 */
-  .text-block {
-    max-width: 100%;
-  }
-
   .text-block p {
     font-size: clamp(0.95rem, 3.5vw, 1.1rem);
   }
 
-  .know-btn {
-    margin-left: 0;
-  }
-
   /* SECTION 4 */
-  .pink-title {
-    font-size: clamp(1.2rem, 5vw, 1.6rem);
-  }
-  .section3 {
-    margin-top: -2rem;
-  }
-  .blue-img {
-    width: 100%;
-    height: auto;
-    margin: 0;
-  }
-
-  .blue-text {
-    width: 100%;
-    font-size: 1rem;
-  }
-
-  .bigphoto {
-    display: none;
-  }
-
-  /* FOOTER FIRST */
-  .footer-section {
+  .section4 {
     flex-direction: column;
     gap: 2.5rem;
   }
 
-  .footer-col {
-    margin: 0;
-  }
-
-  /* WIX FOOTER */
-  .footer-grid {
-    grid-template-columns: 1fr;
-    row-gap: 2rem;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 0.75rem;
-    text-align: center;
-  }
-
-  .footer-bottom::before {
+  .pink-panel,
+  .blue-panel {
     width: 100%;
-    left: 0;
-    transform: none;
+    height: auto;
   }
 
-  .footer-legal {
-    left: 0;
-    justify-content: center;
+  .bigphoto {
+    display: block;
+    margin: 0 auto;
   }
-} 
+}
+
 
 /*------------------------------------------- EXTRA SMALL RESPONSIVE --------------------------------------------------*/ 
-@media (max-width: 480px) { 
-  /* TYPOGRAPHY */
+@media (max-width: 480px) {
+
   .title {
-    font-size: 1.6rem;
+    font-size: clamp(1.6rem, 6vw, 2rem);
   }
 
   .cta-box {
-    font-size: clamp(1.6rem, 6vw, 2rem);
+    font-size: clamp(1.5rem, 6vw, 2rem);
     padding: 2rem 1rem;
   }
 
-  /* CARDS */
   .inspiration-grid {
     grid-template-columns: 1fr;
   }
 
-  /* CHAT BUTTON */
   .chat-btn {
     width: 46px;
     height: 46px;
-    font-size: 18px;
-  }
-
-  .chat-modal {
-    width: 92vw;
   }
 }
+
 
 
 
