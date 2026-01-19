@@ -1370,47 +1370,6 @@ input:focus {
 
 /*============================= RESPONSIVE ==============================*/
 
-@media (max-width: 1200px) {
-
-  /* Genel padding yumuşatma */
-  .headerr,
-  .section2,
-  .section3,
-  .section4,
-  .footer-section,
-  .template-info,
-  .inspiration-section,
-  .cta-section,
-  .wix-footer {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  /* Büyük itelemeleri küçült */
-  .img1,
-  .text-block {
-    margin-left: 4rem;
-  }
-
-  .img2 {
-    left: 4rem;
-  }
-  .img1{
-    position: relative;
-    left: 190px;
-  }
-
-  .yellow-box {
-      position: absolute;
-      top: -21px;
-      right: 50px;         
-      width: 234px;
-      height: 321px;
-      background-color: #FFD814;
-      z-index: -2;
-  }
-}
-
 /*------------------------------------------- IPAD RESPONSIVE -----------------------------------------------*/ 
 @media (max-width: 1024px) {
   .sents2 ul li {
@@ -1464,6 +1423,39 @@ input:focus {
     margin-left: 0;
     text-align: center;
   }
+.bigphoto {
+    display: block;
+    margin: 0 auto;
+  }
+  .pink-panel{
+  margin-right: 240px;
+  width: 670px;
+  height: 210px;
+  background-color: #FFDDEB;
+  padding: 60px 70px;
+  overflow: hidden;
+  z-index: -1;
+}
+.big-photo{
+  width: 320px;
+  height: auto;
+  margin-top: 15px;
+  margin-left: 333px;
+  object-fit: cover;
+}
+
+.blue-panel{
+  position: relative;
+  right: 280px;
+  bottom: 30px;
+  top: 2px;
+  display: block;
+  width: 300px;
+  height:460px;
+  background-color: #0015FF;
+  color: white;
+  overflow: visible;
+}
 
     .inspiration-grid{
     grid-template-columns: repeat(2, 1fr);
@@ -1682,16 +1674,6 @@ input:focus {
   width: 50%;
 }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
