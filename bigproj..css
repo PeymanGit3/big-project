@@ -1556,7 +1556,7 @@ input:focus {
     margin: 0 auto;
   }
   .pink-panel{
-  margin-right: 200px;
+  margin-right: 240px;
   width: 670px;
   height: 210px;
   background-color: #FFDDEB;
@@ -1678,12 +1678,10 @@ input:focus {
 .end{
   border-bottom: none
 }
+.mobile-nav.open {
+  width: 50%;
 }
-
-
-
-
-
+}
 
 
 
