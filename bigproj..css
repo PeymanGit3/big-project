@@ -1556,7 +1556,7 @@ input:focus {
     margin: 0 auto;
   }
   .pink-panel{
-  margin-right: 130px;
+  margin-right: 160px;
   width: 670px;
   height: 210px;
   background-color: #FFDDEB;
@@ -1568,13 +1568,13 @@ input:focus {
   width: 320px;
   height: auto;
   margin-top: 15px;
-  margin-left: 170px;
+  margin-left: 200px;
   object-fit: cover;
 }
 
 .blue-panel{
   position: relative;
-  right: 70px;
+  right: 50px;
   bottom: 30px;
   top: 2px;
   display: block;
