@@ -646,7 +646,6 @@ html, body {
 .footer-title{
   cursor: default;
 }
-/* -------- LEFT -------- */
 .social h4{
   font-size: 10px;
   font-weight: 500;
@@ -677,7 +676,6 @@ html, body {
   margin-left: 5px;
 }
 
-/* -------- CENTER -------- */
 .newsletter h4{
   font-size: 10px;
   font-weight: 700;
@@ -731,8 +729,8 @@ input:focus {
 }
 .fot{
   display: flex;
-  align-items: center;   /* 🔑 dikey hizalama */
-  gap: 8px;              /* checkbox – yazı arası */
+  align-items: center;  
+  gap: 8px;              
   margin-top: 7px;     
 }
 .fot p{
@@ -755,7 +753,7 @@ input:focus {
   cursor: pointer;
 }
 .fot input[type="checkbox"]:checked {
-  background: white;   /* 🔥 önemli */
+  background: white;   
 }
 .fot input[type="checkbox"]:checked::after {
   content: "";
@@ -803,7 +801,6 @@ input:focus {
   font-size: 9px;
 }
 
-/* -------- RIGHT -------- */
 .links h4{
   font-size: 10px;
   opacity: 0.5;
@@ -997,7 +994,6 @@ input:focus {
   font-family: sans-serif;
 }
 
-/* SOL TARAF */
 .template-left{
   display: block;
   max-width: 420px;
@@ -1257,7 +1253,6 @@ input:focus {
   text-decoration: underline;
 }
 
-/* ALT BAR */
 .footer-bottom{
   width: 100%;
   margin-top: 10px;
@@ -1366,7 +1361,9 @@ input:focus {
 .sents2 .fa-bars {
   display: none;
 }
-
+.footer-col.links{
+  left: 100px;
+}
 
 /*============================= RESPONSIVE ==============================*/
 
@@ -1387,7 +1384,6 @@ input:focus {
     display: block;
   }
 
-  /* SECTION 2 */
   .section2 {
     padding-bottom: 2rem;
   }
@@ -1395,7 +1391,6 @@ input:focus {
     position: absolute;
     left: 190px;
   }
-  /* SARI DIV GÖRÜNÜR AMA KONUM DEĞİŞİR */
   .yellow-box {
       position: absolute;
       top: -21px;
@@ -1406,7 +1401,6 @@ input:focus {
       z-index: -2;
   }
 
-  /* SECTION 3 */
   .section3 {
     flex-direction: column;
     align-items: center;
@@ -1475,7 +1469,6 @@ input:focus {
     grid-column: 1 / -1;
     margin-bottom: 20px;
   }
-
 } 
 
 /*------------------------------------------- PHONE RESPONSIVE --------------------------------------------------*/ 
@@ -1502,7 +1495,6 @@ input:focus {
     padding-right: 1.25rem;
   }
 
-  /* SECTION 2 */
   .section2 {
     flex-direction: column;
     align-items: center;
@@ -1520,18 +1512,16 @@ input:focus {
   }
 
   .img1 {
-    order: 2;                 /* SHOP’tan sonra */
+    order: 2;                 
     position: relative;
     bottom: 340px;
     margin-bottom: -300px;
   }
 
-  /* SECTION 3 */
   .text-block p {
     font-size: clamp(0.95rem, 3.5vw, 1.1rem);
   }
 
-  /* SECTION 4 */
   .section4 {
     flex-direction: column;
     gap: 2.5rem;
@@ -1576,11 +1566,6 @@ input:focus {
   color: white;
   overflow: visible;
 }
-
-.newsletter{
-  margin-right: 30px;
-}
-
 
 .template-left .line{
   width: 170%;
@@ -1670,9 +1655,13 @@ input:focus {
 .end{
   border-bottom: none
 }
+.footer-col.links{
+  margin-right: 140px;
+}
 .mobile-nav.open {
   width: 50%;
 }
+
 }
 
 

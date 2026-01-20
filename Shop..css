@@ -11,6 +11,7 @@
   font-size: 20px;
   letter-spacing: 2px;
   font-family: "Outfit-Bold";
+  margin-top: 60px;
 }
 @font-face {
   font-family: "Outfit-Bold";
@@ -113,7 +114,6 @@
 }
 
 .product-card {
-  background: #f1f1f1;
   text-align: center;
   width: 380px;
   height: 400px;
@@ -178,17 +178,6 @@
   color: var(--blue);
 }
 
-@media (max-width: 1024px) {
-  .shop-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .shop-grid {
-    grid-template-columns: 1fr;
-  }
-}
 .product-img-wrap {
   position: relative;
   overflow: hidden;
@@ -348,9 +337,12 @@
 }
 
 
-
+.footer-col.links{
+  left: 90px;
+}
 
 /* ==================================== SHOP PAGE RESPONSIVE =========================================== */
+
 
 /* ---------- TABLET (≤1024px) ---------- */
 @media (max-width: 1024px) {
@@ -358,14 +350,11 @@
   .shop-page {
     padding: 50px 40px;
   }
-
-  /* layout alt alta */
   .shop-layout {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  /* filter üstte */
   .shop-filter {
     position: static;
     width: 100%;
@@ -378,7 +367,6 @@
     width: 100%;
   }
 
-  /* grid 2 kolon */
   .shop-grid {
     right: 0;
     top: 0;
@@ -387,17 +375,62 @@
   }
 
   .product-card {
-    width: 100%;
+    
     height: auto;
   }
-
+  .product-card.card_3{
+    margin-top: 50px;
+  }
+  .product-card.card_7 img{
+    height: 416px;
+  }
+    .product-card.card_10{
+    position: relative;
+    display:block;
+    bottom: 3px;
+  }
+  .product-card.card_21 img{
+    height: auto;
+  }
+  .product-card.card_22{
+    position: relative;
+    bottom: auto;
+  }
   .product-card img {
     height: auto;
   }
+  .product-price {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 7px;
+  bottom: 10px;
+  margin-top: 4px;
+}
+  .versec{
+  margin-top: 17px;
+}
+
+.footer-col.links{
+  left: 70px;
+}
+
 }
 
 /* ---------- MOBILE (≤768px) ---------- */
 @media (max-width: 768px) {
+
+  
+    .quick-view{
+    bottom: 0;
+    opacity: 1;
+  }
+
+  .img-front,
+  .img-back{
+    opacity: 1;
+  }
+
 
   .shop-title {
     font-size: 18px;
@@ -407,7 +440,6 @@
     font-size: 8px;
   }
 
-  /* ürünler TEK KOLON */
   .shop-grid {
     grid-template-columns: 1fr;
   }
@@ -416,53 +448,82 @@
     width: 100%;
   }
 
-  /* quick-view hover mobilde sorun çıkarmasın */
   .quick-view {
     bottom: 0;
     opacity: 1;
   }
-
-  .product-card:hover .img-front {
-    opacity: 1;
+  .footer-section2{
+    padding: 0 190px 0 20px;
   }
-
-  .product-card:hover .img-back {
-    opacity: 0;
-  }
+  .footer-col.links2{
+  left: 70px;
 }
 
-/* ---------- SMALL MOBILE (≤480px) ---------- */
-@media (max-width: 480px) {
-
-  .shop-page {
-    padding: 40px 20px;
+    .footer-list{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease;
+    position: relative;
+    top: 20px;
+    right: 27px;
+  }
+    .footer-list li{
+    padding: 6px 0;
+  }
+  .footer-foots{
+    width: 150%;
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 12px 0;
+  }
+  .footer-foots.open .footer-list{
+    max-height: 400px;
+    margin-top: 8px;
   }
 
-  .shop-title {
-    font-size: 16px;
-    letter-spacing: 1px;
+  .footer-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    position: relative;
+    top: 20px;
+    margin-top: -40px;
+    right: 27px;
   }
 
-  .shop-subtitle {
-    font-size: 7px;
+  .footer-title::after{
+    position: relative;
+    content: "⌄";
+    bottom: 8px;
+    font-size: 14px;
+    transition: transform .25s ease;
+    color:#9C9FA4;
   }
 
-  .product-name {
-    font-size: 9px;
+  .footer-foots.open .footer-title::after{
+      content: "⌃";    
+      bottom: 3px;
+      font-size: 14px;
+      transition: transform .25s ease;
+      color:#9C9FA4;
   }
+  .footer-legal{
+  left: 5px;
+}
+.footer-about{
+  order: -1;
+}
 
-  .product-price {
-    font-size: 7px;
-  }
-
-  .ver {
-    width: 60%;
-  }
-
-  .footer-section2 {
-    flex-direction: column;
-    padding: 40px 20px;
-    gap: 30px;
-  }
+.footer-grid{
+  grid-template-columns: 1fr;
+  margin-right: 200px;
+}
+.footer-foots h5{
+  font-size: 11px;
+}
+.end{
+  border-bottom: none
+}
 }
 
