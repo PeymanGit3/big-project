@@ -9,7 +9,7 @@
 /*============================ QUIÉNES SOMOS ===============================*/
 .about-hero {
   display: flex;
-  min-height: 100vh;
+  min-height: 105vh;
 }
 
 .about-title {
@@ -29,7 +29,7 @@
   width: 50%;
   padding: 120px 100px;
   left: 423px;
-  top: -120px;
+  top: -90px;
 
    margin-top: 70px;
 }
@@ -56,6 +56,8 @@
 }
 
 .about-right img {
+  position: relative;
+  top: 50px; 
   margin-top: 0;
   width: 300px;
   height: 450px;
@@ -90,6 +92,7 @@
 .card-overlay3 {
   position: absolute;
   inset: 0;
+  margin-top: 50px;
   background-color: var(--blue);           
   opacity: 0.35;
   transition: opacity 0.3s ease;
@@ -202,7 +205,6 @@
   width: 250px;
 }
 
-/* üst resim */
 .value-img {
   width: 82%;
   height: 190px;
@@ -1327,7 +1329,6 @@
   align-items: start;
 }
 
-/* GÖRSELLER */
 .course-img img {
   position: relative;
   display: flex;
@@ -1346,7 +1347,6 @@
   top: 70px;
 }
 
-/* METİNLER */
 .course-text h2 {
   color: #0015FF;
   font-size: 18px;
@@ -1378,7 +1378,6 @@
   width: 410px;
 }
 
-/* ALT GÖRSEL İKİLİ */
 .course-img-row {
   position: relative;
   display: flex;
@@ -1639,15 +1638,13 @@ input:focus {
 .footer-col3.links3{
   left: 90px;
 }
-.kurs-melumati{
-  color: green !important;
-}
+
 
 /* ===================== PAGE 3 – RESPONSIVE ===================== */
 @media (min-width: 1024px) and (max-width: 1500px){
 
-  .about-title {
-    color: green;
+      .about-right img{
+    top: -60px;
   }
   .about-hero {
     flex-direction: column;
@@ -1792,37 +1789,47 @@ input:focus {
     left: 250px;
   }
   .process-image6{
-    width: 80%;
-    left: -75px;
+    bottom: 300px;
+    left: 190px;
+  }
+  .process-image6 img{
+    display: block;
+    width: 90%;
   }
   .process-boxes6{
-    top: 50px;
-    left: 30px;
+    top: -240px;
+    left: -235px;
   }
   .process-section6{
     bottom: 120px;
     margin-bottom: -150px;
   }
-  
+
   .process-section7{
-    bottom: 100px;
-    margin-bottom: -210px;
+    bottom: 290px;
+    margin-bottom: -390px;
   }
   .process-image7{
+    bottom: 290px;
     width: 80%;
-    left: -75px;
+    left: 80px;
+  }
+  .process-image7 img{
+    width: 300px;
   }
   .process-boxes7{
-    bottom: 135px;
-    left: 180px;
+    bottom: 415px;
+    left: 220px;
   }
   .process-title {
     margin-bottom: -220px;  
     bottom: 120px;
   }
-  .lets-go{
-    position: relative;
-    display: flex;
+ 
+  .img6opacity{
+    display: block;
+    height: 210px;
+    width: 315px;
   }
 
   .course-text{
@@ -1847,13 +1854,10 @@ input:focus {
 
   [class^="process-image"],
   [class^="process-boxes"] {
-    left: 0;
     right: 0;
-    bottom: 0;
     position: relative;
   }
 
-  /* COURSE */
   .course-section {
     bottom: 0;
     margin-bottom: 0;
@@ -1880,16 +1884,19 @@ input:focus {
     left: 0;
     width: 100%;
   }
+    .course-text{
+    text-align: left;
+    left: -35px;
+   
+  }
 }
 
 
 /* ---------- TABLET (≤1024px) ---------- */
 @media (max-width: 1024px) {
-
-.about-title{
-  color: red;
-}
-
+    .about-right img{
+    top: -60px;
+  }
 .values-grid {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -1947,42 +1954,55 @@ input:focus {
     left: -60px;
     bottom: 110px;
   }
+  .process-image5 img{
+    width: 90%;
+  }
   .process-boxes5{
     bottom: 250px;
-    left: 250px;
+    left: 270px;
   }
   .process-image6{
-    width: 80%;
-    left: -75px;
+    bottom: 300px;
+    left: 190px;
+  }
+  .process-image6 img{
+    display: block;
+    width: 90%;
   }
   .process-boxes6{
-    top: 50px;
-    left: 30px;
+    top: -240px;
+    left: -235px;
   }
   .process-section6{
     bottom: 120px;
     margin-bottom: -150px;
   }
-  
+
   .process-section7{
-    bottom: 100px;
-    margin-bottom: -210px;
+    bottom: 290px;
+    margin-bottom: -390px;
   }
   .process-image7{
+    bottom: 290px;
     width: 80%;
-    left: -75px;
+    left: 80px;
+  }
+  .process-image7 img{
+    width: 300px;
   }
   .process-boxes7{
-    bottom: 135px;
-    left: 180px;
+    bottom: 415px;
+    left: 220px;
   }
   .process-title {
     margin-bottom: -220px;  
     bottom: 120px;
   }
-  .lets-go{
-    position: relative;
-    display: flex;
+ 
+  .img6opacity{
+    display: block;
+    height: 210px;
+    width: 315px;
   }
 
   .course-text{
@@ -2127,19 +2147,26 @@ input:focus {
   }
 
   .course-img.big,
-  .course-img-row,
   .course-info,
+  .course-img-row,
   .course-text {
-    left: 0;
     right: 0;
     margin: 0 auto;
-    text-align: center;
+   
   }
-
+.course-img-row{
+  left: 150px;
+}
   .course-info p,
   .course-info h3 {
     left: 0;
     width: 100%;
+  }
+  .newsletter3{
+  margin-left: 27px;
+}
+    .footer-section3{
+    padding: 0 190px 0 20px;
   }
 }
 
@@ -2147,9 +2174,6 @@ input:focus {
 /* ---------- MOBILE (≤768px) ---------- */
 @media (max-width: 768px) {
 
-  .about-title{
-    color: blue;
-  }
     .about-right {
     width: 100%;
     left: 100px;
@@ -2157,6 +2181,9 @@ input:focus {
     bottom: 0;
     padding: 60px 40px;
     text-align: center;
+  }
+    .about-right img{
+    top: -60px;
   }
 
    .values-grid {
@@ -2167,36 +2194,42 @@ input:focus {
     width: 80%;
   }
   .process-image{
-    left: -50px;   
+    left: -43px;   
+  }
+  .process-image img{
+    width: 70%;   
   }
   .process-boxes{
-    left: 155px;
+    left: 120px;
     top: 90px;
     margin-top: -170px;
   }
   .process-image2{
-    left: -45px;   
+    left: 160px;   
   }
     .process-image2 img{
-    width: 70%;  
+    width: 60%;  
   }
   .process-boxes2{
     top: 40px;
-    left: -13px;
+    left: -200px;
   }
   .process-image3{
-    left: -50px;
+    left: -25px;
+  }
+   .process-image3 img{
+    width: 70%;
   }
   .process-boxes3{
     bottom: 320px;
-    left: 160px;
+    left: 130px;
   }
   .process-image4{
     bottom: 230px;
     left: 150px;
   }
     .process-image4 img{
-    width: 75%;
+    width: 63%;
     }
   .process-boxes4{
     top: -175px;
@@ -2212,11 +2245,11 @@ input:focus {
   }
   .process-boxes5{
     bottom: 120px;
-    left: 150px;
+    left: 120px;
   }
   .process-image6{
     bottom: 85px;
-    left: 130px;
+    left: 150px;
   }
   .process-image6 img{
     display: block;
@@ -2232,15 +2265,18 @@ input:focus {
     bottom: 120px;
     margin-bottom: -150px;
   }
-  
+
   .process-section7{
-    bottom: 100px;
-    margin-bottom: -280px;
+    bottom: 120px;
+    margin-bottom: -300px;
   }
   .process-image7{
     bottom: 80px;
     width: 80%;
     left: -75px;
+  }
+  .process-image7 img{
+    width: 250px;
   }
   .process-boxes7{
     bottom: 215px;
@@ -2250,33 +2286,61 @@ input:focus {
     margin-bottom: -220px;  
     bottom: 120px;
   }
-  .lets-go{
-    position: relative;
-    display: flex;
-  }
  
   .img6opacity{
     display: block;
     height: 190px;
   }
+
+.course-img-row {
+  position: relative;
+  left: -50px;
+  bottom: 90px;
+}
+.course-img-row img{
+  width: 350px;
+}
   .course-text{
     text-align: left;
-    left: -35px;
-   
+    left: -40px;
   }
+  .course-text h2{
+    font-size: 13px;
+  }
+  .course-info p{
+  font-size: 8px;
+}
+  .course-info h3{
+  font-size: 14px;
+}
 
   .course-img.big{
   margin-left: -25px;
 }
-  .course-img.add2{
+  .course-img.big img{
+  width: 190px;
+}
+.course-img.add2{
+  margin-left: -2px;
+}
+.course-img.add2 img{
+  width: 195px;
   margin-left: -25px;
+}
+.course-img-row{
+  left: -20px;
 }
 .course-info{
   position: relative;
   bottom: 40px;
 }
 
-
+.newsletter3{
+  margin-left: 0;
+}
+.footer-col3.links3{
+  margin-left: -80px;   
+}
     .footer-section3{
     padding: 0 190px 0 20px;
   }
@@ -2351,3 +2415,45 @@ input:focus {
   margin-right: 140px;
 }
 }
+
+ @media (min-width: 493px) and (max-width: 768px){
+  .process-image6{
+    left: 155px;
+  }
+  .process-image7{
+    left: -70px;
+  }
+} 
+ @media (min-width: 520px) and (max-width: 768px){
+  .process-image6{
+    left: 175px;
+  }
+  .process-image7{
+    left: -60px;
+  }
+} 
+ @media (min-width: 540px) and (max-width: 768px){
+  .process-image6{
+    left: 185px;
+  }
+  .process-image7{
+    left: -50px;
+  }
+} 
+ @media (min-width: 560px) and (max-width: 768px){
+  .process-image6{
+    left: 195px;
+  }
+    .process-image7{
+    left: -40px;
+  }
+} 
+ @media (min-width: 600px) and (max-width: 768px){
+  .process-image6{
+    left: 200px;
+  }
+  .process-image7{
+    left: -18px;
+  }
+} 
+  
